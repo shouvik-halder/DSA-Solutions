@@ -1,0 +1,17 @@
+{
+  "title": "String to Integer (atoi)",
+  "titleSlug": "string-to-integer-atoi",
+  "difficulty": "Medium",
+  "tags": [
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1963356598",
+      "runtime": 0,
+      "memory": 41584000,
+      "language": "csharp",
+      "timestamp": 1774836379
+    }
+  ]
+}

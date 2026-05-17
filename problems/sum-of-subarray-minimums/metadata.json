@@ -1,0 +1,20 @@
+{
+  "title": "Sum of Subarray Minimums",
+  "titleSlug": "sum-of-subarray-minimums",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1971326589",
+      "runtime": 15,
+      "memory": 50404000,
+      "language": "csharp",
+      "timestamp": 1775546931
+    }
+  ]
+}
