@@ -18,6 +18,14 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0",
 }
 
+LANGUAGE_EXTENSIONS = {
+    "Python3": "py",
+    "C++": "cpp",
+    "Java": "java",
+    "JavaScript": "js",
+    "TypeScript": "ts",
+}
+
 
 def graphql_request(query: str, variables: dict = None):
     response = requests.post(
@@ -28,8 +36,6 @@ def graphql_request(query: str, variables: dict = None):
         },
         headers=HEADERS,
     )
-
-    print(f"Status Code: {response.status_code}")
 
     response.raise_for_status()
 
@@ -61,16 +67,70 @@ def get_recent_submissions():
     return data["recentAcSubmissionList"]
 
 
-def save_json(filename: str, data):
-    problems_dir = Path("problems")
-    problems_dir.mkdir(exist_ok=True)
+def get_submission_details(submission_id: str):
+    query = """
+    query submissionDetails($submissionId: Int!) {
+      submissionDetails(submissionId: $submissionId) {
+        runtime
+        memory
+        code
+        timestamp
+        lang {
+          name
+        }
+        question {
+          title
+          titleSlug
+          difficulty
+        }
+      }
+    }
+    """
 
-    filepath = problems_dir / filename
+    data = graphql_request(
+        query,
+        {
+            "submissionId": int(submission_id)
+        }
+    )
 
-    with open(filepath, "w") as f:
-        json.dump(data, f, indent=2)
+    return data["submissionDetails"]
 
-    print(f"Saved: {filepath}")
+
+def save_problem(details):
+    question = details["question"]
+
+    title_slug = question["titleSlug"]
+
+    lang_name = details["lang"]["name"]
+
+    extension = LANGUAGE_EXTENSIONS.get(lang_name, "txt")
+
+    problem_dir = Path("problems") / title_slug
+
+    problem_dir.mkdir(parents=True, exist_ok=True)
+
+    solution_path = problem_dir / f"solution.{extension}"
+
+    metadata_path = problem_dir / "metadata.json"
+
+    with open(solution_path, "w") as f:
+        f.write(details["code"])
+
+    metadata = {
+        "title": question["title"],
+        "titleSlug": question["titleSlug"],
+        "difficulty": question["difficulty"],
+        "runtime": details["runtime"],
+        "memory": details["memory"],
+        "language": lang_name,
+        "timestamp": details["timestamp"],
+    }
+
+    with open(metadata_path, "w") as f:
+        json.dump(metadata, f, indent=2)
+
+    print(f"Saved: {problem_dir}")
 
 
 def validate_environment():
@@ -98,9 +158,12 @@ def main():
 
     print(f"Found {len(submissions)} recent accepted submissions")
 
-    save_json("recent_submissions.json", submissions)
+    for submission in submissions[:3]:
+        print(f"Processing: {submission['title']}")
 
-    print(json.dumps(submissions, indent=2))
+        details = get_submission_details(submission["id"])
+
+        save_problem(details)
 
 
 if __name__ == "__main__":
