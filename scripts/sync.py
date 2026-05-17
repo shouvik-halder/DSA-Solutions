@@ -11,6 +11,7 @@ headers = {
     "x-csrftoken": CSRFTOKEN,
     "Referer": "https://leetcode.com",
     "Content-Type": "application/json",
+    "User-Agent": "Mozilla/5.0",
 }
 
 query = """

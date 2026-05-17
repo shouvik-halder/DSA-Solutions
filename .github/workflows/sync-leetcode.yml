@@ -1,4 +1,4 @@
-name: Sync Leetcode
+name: Sync LeetCode
 
 on:
   workflow_dispatch:
@@ -9,13 +9,34 @@ jobs:
   sync:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - name: Sync LeetCode submissions
-        uses: joshcai/leetcode-sync@v1.7
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          github-token: ${{ github.token }}
-          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
-          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          destination-folder: problems
-          verbose: true
-          commit-header: "[LeetCode Sync]"
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run sync script
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          CSRFTOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        run: python scripts/sync.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+
+          git diff --cached --quiet || git commit -m "Sync LeetCode submissions"
+
+          git push
