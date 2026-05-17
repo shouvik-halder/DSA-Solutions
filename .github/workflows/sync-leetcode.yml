@@ -3,7 +3,7 @@ name: Sync LeetCode
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   sync:
@@ -28,8 +28,11 @@ jobs:
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSRFTOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
-          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME}}
+          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
         run: python scripts/sync.py
+
+      - name: Generate dashboard
+        run: python scripts/generate_dashboard.py
 
       - name: Commit changes
         run: |
