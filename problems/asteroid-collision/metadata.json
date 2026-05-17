@@ -1,0 +1,9 @@
+{
+  "title": "Asteroid Collision",
+  "titleSlug": "asteroid-collision",
+  "difficulty": "Medium",
+  "runtime": 7,
+  "memory": 50728000,
+  "language": "csharp",
+  "timestamp": 1775708382
+}

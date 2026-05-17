@@ -1,0 +1,9 @@
+{
+  "title": "Sum of Subarray Minimums",
+  "titleSlug": "sum-of-subarray-minimums",
+  "difficulty": "Medium",
+  "runtime": 15,
+  "memory": 50404000,
+  "language": "csharp",
+  "timestamp": 1775546931
+}
