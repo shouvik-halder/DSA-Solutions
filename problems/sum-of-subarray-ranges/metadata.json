@@ -1,9 +1,0 @@
-{
-  "title": "Sum of Subarray Ranges",
-  "titleSlug": "sum-of-subarray-ranges",
-  "difficulty": "Medium",
-  "runtime": 12,
-  "memory": 43856000,
-  "language": "csharp",
-  "timestamp": 1775625324
-}
