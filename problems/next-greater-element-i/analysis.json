@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a monotonic stack to find the next greater element for each element in nums2. It iterates through nums2 in reverse, maintaining a stack of elements to efficiently determine the next greater element for each number.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "Stack"
+  ]
+}

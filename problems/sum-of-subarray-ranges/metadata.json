@@ -1,0 +1,19 @@
+{
+  "title": "Sum of Subarray Ranges",
+  "titleSlug": "sum-of-subarray-ranges",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1972232743",
+      "runtime": 12,
+      "memory": 43856000,
+      "language": "csharp",
+      "timestamp": 1775625324
+    }
+  ]
+}

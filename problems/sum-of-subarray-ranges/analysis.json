@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses monotonic stacks to efficiently find the next and previous smaller and greater elements for each element in the array. This allows the calculation of contributions to the sum of subarray ranges in linear time.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Stack",
+    "Sliding Window"
+  ]
+}

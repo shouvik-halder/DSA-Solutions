@@ -1,0 +1,18 @@
+{
+  "title": "Remove Duplicates from Sorted Array",
+  "titleSlug": "remove-duplicates-from-sorted-array",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005565132",
+      "runtime": 0,
+      "memory": 51624000,
+      "language": "csharp",
+      "timestamp": 1779024047
+    }
+  ]
+}

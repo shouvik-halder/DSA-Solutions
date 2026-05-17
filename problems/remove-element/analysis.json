@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer technique where one pointer iterates through the array and the other keeps track of the position to place elements that are not equal to the target value. When a non-target value is found, it is swapped with the value at the 'k' pointer, effectively removing the target values in place.",
+  "improvements": null,
+  "relatedPatterns": [
+    "In-place Modification",
+    "Partitioning"
+  ]
+}
