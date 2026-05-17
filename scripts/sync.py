@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from pathlib import Path
 
 import requests
@@ -24,7 +25,23 @@ LANGUAGE_EXTENSIONS = {
     "Java": "java",
     "JavaScript": "js",
     "TypeScript": "ts",
+    # C# — LeetCode returns "csharp" for lang.name
+    "csharp": "cs",
+    "C#": "cs",
+    "golang": "go",
+    "Go": "go",
+    "Rust": "rs",
+    "Ruby": "rb",
+    "Swift": "swift",
+    "Kotlin": "kt",
+    "Scala": "scala",
 }
+
+SYNCED_FILE = Path("synced_submissions.json")
+RECENT_SUBMISSIONS_FILE = Path("problems/recent_submissions.json")
+
+# Seconds to wait between submission detail fetches to avoid rate limiting
+RATE_LIMIT_DELAY = 1.0
 
 
 def graphql_request(query: str, variables: dict = None):
@@ -106,7 +123,10 @@ def save_problem(details):
 
     lang_name = details["lang"]["name"]
 
-    extension = LANGUAGE_EXTENSIONS.get(lang_name, "txt")
+    extension = LANGUAGE_EXTENSIONS.get(lang_name)
+    if extension is None:
+        print(f"Warning: unknown language '{lang_name}' for {title_slug} — saving as .txt")
+        extension = "txt"
 
     problem_dir = Path("problems") / title_slug
 
@@ -136,20 +156,25 @@ def save_problem(details):
 
 
 def load_synced_submissions():
-    synced_file = Path("synced_submissions.json")
-
-    if not synced_file.exists():
+    if not SYNCED_FILE.exists():
         return set()
 
-    with open(synced_file, "r") as f:
+    with open(SYNCED_FILE, "r") as f:
         data = json.load(f)
 
     return set(data)
 
 
 def save_synced_submissions(submission_ids):
-    with open("synced_submissions.json", "w") as f:
+    with open(SYNCED_FILE, "w") as f:
         json.dump(sorted(list(submission_ids)), f, indent=2)
+
+
+def save_recent_submissions(submissions):
+    """Keep problems/recent_submissions.json in sync with the latest fetch."""
+    RECENT_SUBMISSIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(RECENT_SUBMISSIONS_FILE, "w") as f:
+        json.dump(submissions, f, indent=2)
 
 
 def validate_environment():
@@ -179,6 +204,9 @@ def main():
 
     print(f"Found {len(submissions)} recent accepted submissions")
 
+    # Keep recent_submissions.json up to date with every run
+    save_recent_submissions(submissions)
+
     new_synced = set(synced_submissions)
 
     processed_count = 0
@@ -196,11 +224,15 @@ def main():
 
         save_problem(details)
 
+        # Flush after each successful save so a mid-run failure
+        # doesn't cause already-saved problems to be re-fetched
         new_synced.add(submission_id)
+        save_synced_submissions(new_synced)
 
         processed_count += 1
 
-    save_synced_submissions(new_synced)
+        # Avoid hammering LeetCode's GraphQL endpoint
+        time.sleep(RATE_LIMIT_DELAY)
 
     print(f"Processed {processed_count} new submissions")
 
