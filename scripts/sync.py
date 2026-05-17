@@ -37,6 +37,8 @@ def graphql_request(query: str, variables: dict = None):
         headers=HEADERS,
     )
 
+    print(f"Status Code: {response.status_code}")
+
     response.raise_for_status()
 
     data = response.json()
@@ -133,6 +135,23 @@ def save_problem(details):
     print(f"Saved: {problem_dir}")
 
 
+def load_synced_submissions():
+    synced_file = Path("synced_submissions.json")
+
+    if not synced_file.exists():
+        return set()
+
+    with open(synced_file, "r") as f:
+        data = json.load(f)
+
+    return set(data)
+
+
+def save_synced_submissions(submission_ids):
+    with open("synced_submissions.json", "w") as f:
+        json.dump(sorted(list(submission_ids)), f, indent=2)
+
+
 def validate_environment():
     missing = []
 
@@ -154,16 +173,36 @@ def validate_environment():
 def main():
     validate_environment()
 
+    synced_submissions = load_synced_submissions()
+
     submissions = get_recent_submissions()
 
     print(f"Found {len(submissions)} recent accepted submissions")
 
-    for submission in submissions[:3]:
+    new_synced = set(synced_submissions)
+
+    processed_count = 0
+
+    for submission in submissions:
+        submission_id = submission["id"]
+
+        if submission_id in synced_submissions:
+            print(f"Skipping already synced: {submission['title']}")
+            continue
+
         print(f"Processing: {submission['title']}")
 
-        details = get_submission_details(submission["id"])
+        details = get_submission_details(submission_id)
 
         save_problem(details)
+
+        new_synced.add(submission_id)
+
+        processed_count += 1
+
+    save_synced_submissions(new_synced)
+
+    print(f"Processed {processed_count} new submissions")
 
 
 if __name__ == "__main__":
