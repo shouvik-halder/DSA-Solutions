@@ -1,0 +1,17 @@
+{
+  "title": "Shuffle the Array",
+  "titleSlug": "shuffle-the-array",
+  "difficulty": "Easy",
+  "tags": [
+    "Array"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005558927",
+      "runtime": 138,
+      "memory": 49448000,
+      "language": "csharp",
+      "timestamp": 1779023512
+    }
+  ]
+}
