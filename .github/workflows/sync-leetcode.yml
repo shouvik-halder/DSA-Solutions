@@ -32,7 +32,10 @@ jobs:
         run: python scripts/sync.py
 
       - name: Generate dashboard
-        run: python scripts/generate_dashboard.py
+        run: |
+          pwd
+          ls scripts/
+          python scripts/generate_dashboard.py
 
       - name: Commit changes
         run: |
