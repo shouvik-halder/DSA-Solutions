@@ -1,0 +1,20 @@
+{
+  "title": "Next Greater Element I",
+  "titleSlug": "next-greater-element-i",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1970090600",
+      "runtime": 2,
+      "memory": 46968000,
+      "language": "csharp",
+      "timestamp": 1775436992
+    }
+  ]
+}
