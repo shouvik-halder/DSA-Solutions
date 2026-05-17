@@ -1,0 +1,9 @@
+{
+  "title": "Remove K Digits",
+  "titleSlug": "remove-k-digits",
+  "difficulty": "Medium",
+  "runtime": 10,
+  "memory": 45336000,
+  "language": "csharp",
+  "timestamp": 1775710424
+}
