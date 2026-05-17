@@ -1,6 +1,6 @@
 # DSA Solutions
 
-[![Sync LeetCode](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/sync-leetcode.yml/badge.svg)](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/sync-leetcode.yml)
+[![Sync LeetCode](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/sync-leetcode.yml/badge.svg)](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/sync-leetcode.yml) [![Deploy Pages](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/shouvik-halder/DSA-Solutions/actions/workflows/deploy-pages.yml)
 
 A self-updating repository that automatically syncs my LeetCode accepted submissions, enriches them with topic tags and AI-powered pattern analysis, and publishes a live dashboard to GitHub Pages.
 
