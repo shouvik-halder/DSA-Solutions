@@ -3,6 +3,7 @@ import requests
 
 LEETCODE_SESSION = os.getenv("LEETCODE_SESSION")
 CSRFTOKEN = os.getenv("CSRFTOKEN")
+USERNAME = os.getenv("LEETCODE_USERNAME")
 
 url = "https://leetcode.com/graphql"
 
@@ -15,8 +16,8 @@ headers = {
 }
 
 query = """
-query {
-  recentAcSubmissionList {
+query recentAcSubmissions($username: String!) {
+  recentAcSubmissionList(username: $username) {
     id
     title
     titleSlug
@@ -27,8 +28,21 @@ query {
 
 response = requests.post(
     url,
-    json={"query": query},
+    json={
+        "query": query,
+        "variables": {
+            "username": USERNAME
+        }
+    },
     headers=headers
 )
 
-print(response.json())
+print("Status Code:", response.status_code)
+
+data = response.json()
+
+if "errors" in data:
+    print("GraphQL Errors:")
+    print(data["errors"])
+else:
+    print(data)
