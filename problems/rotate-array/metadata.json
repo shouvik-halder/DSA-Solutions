@@ -1,0 +1,19 @@
+{
+  "title": "Rotate Array",
+  "titleSlug": "rotate-array",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005863563",
+      "runtime": 0,
+      "memory": 64692000,
+      "language": "csharp",
+      "timestamp": 1779048947
+    }
+  ]
+}

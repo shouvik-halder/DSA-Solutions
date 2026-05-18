@@ -1,0 +1,11 @@
+{
+  "pattern": "Array Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the reverse method to rotate the array in three steps: first reversing the first part, then the second part, and finally the entire array. This approach effectively rearranges the elements in place without needing extra space.",
+  "improvements": null,
+  "relatedPatterns": [
+    "In-place Algorithm",
+    "Reversal Algorithm"
+  ]
+}
