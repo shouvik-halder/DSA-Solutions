@@ -775,7 +775,7 @@ const tot = stats.total || 1;
   const pct = Math.round(n/tot*100);
   dc.innerHTML += `<div class="diff-item">
     <span class="diff-name ${d}">${d}</span>
-    <div class="diff-track"><div class="diff-fill ${d}" style="width:0%" data-w="${pct}%"></div></div>
+    <div class="diff-track"><div class="diff-fill ${d.toLowerCase()}" style="width:0%" data-w="${pct}%"></div></div>
     <span class="diff-n">${n}</span>
   </div>`;
 });
