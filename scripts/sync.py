@@ -169,8 +169,16 @@ def get_submission_details(submission_id: str):
       }
     }
     """
+
     data = graphql_request(query, {"submissionId": int(submission_id)})
-    return data["submissionDetails"]
+
+    details = data.get("submissionDetails")
+
+    if details is None:
+        print(f"Warning: submissionDetails returned null for {submission_id}")
+        return None
+
+    return details
 
 
 def get_problem_tags(title_slug: str) -> list[str]:
@@ -355,6 +363,9 @@ def main():
         print(f"Processing: {submission['title']}")
 
         details = get_submission_details(submission_id)
+        if details is None:
+            print(f"Skipping submission {submission['title']} due to missing details")
+            continue
         save_problem(submission_id, details, ai_client)
 
         new_synced.add(submission_id)
