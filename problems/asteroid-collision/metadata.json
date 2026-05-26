@@ -1,0 +1,21 @@
+{
+  "title": "Asteroid Collision",
+  "titleSlug": "asteroid-collision",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Stack",
+    "Simulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1973168492",
+      "runtime": 7,
+      "memory": 50700000,
+      "runtimePercentile": 33.642,
+      "memoryPercentile": 52.46910000000002,
+      "language": "csharp",
+      "timestamp": 1775708382
+    }
+  ]
+}

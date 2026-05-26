@@ -1,0 +1,10 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array while maintaining a count of consecutive ones. When a zero is encountered, it compares the current count of ones with the maximum found so far and resets the current count.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sliding Window"
+  ]
+}

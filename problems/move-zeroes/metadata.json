@@ -1,0 +1,20 @@
+{
+  "title": "Move Zeroes",
+  "titleSlug": "move-zeroes",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005249095",
+      "runtime": 1,
+      "memory": 58100000,
+      "runtimePercentile": 96.7244,
+      "memoryPercentile": 55.17079999999998,
+      "language": "csharp",
+      "timestamp": 1778996274
+    }
+  ]
+}

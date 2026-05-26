@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a monotonic stack to keep track of the next greater elements in a circular array. By iterating through the array twice, it ensures that all elements are considered while efficiently finding the next greater element for each.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Stack",
+    "Circular Array"
+  ]
+}

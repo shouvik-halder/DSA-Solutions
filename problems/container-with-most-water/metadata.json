@@ -1,0 +1,21 @@
+{
+  "title": "Container With Most Water",
+  "titleSlug": "container-with-most-water",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Greedy"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1768140587",
+      "runtime": 1,
+      "memory": 63200000,
+      "runtimePercentile": 99.7383,
+      "memoryPercentile": 8.821999999999916,
+      "language": "csharp",
+      "timestamp": 1757672095
+    }
+  ]
+}

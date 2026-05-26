@@ -1,0 +1,21 @@
+{
+  "title": "Daily Temperatures",
+  "titleSlug": "daily-temperatures",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1772234895",
+      "runtime": 10,
+      "memory": 72700000,
+      "runtimePercentile": 65.6128,
+      "memoryPercentile": 11.857999999999974,
+      "language": "csharp",
+      "timestamp": 1757992482
+    }
+  ]
+}

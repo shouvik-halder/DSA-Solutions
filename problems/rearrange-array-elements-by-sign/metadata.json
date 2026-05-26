@@ -1,0 +1,21 @@
+{
+  "title": "Rearrange Array Elements by Sign",
+  "titleSlug": "rearrange-array-elements-by-sign",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Simulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1889869336",
+      "runtime": 4,
+      "memory": 90300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 94.61540000000001,
+      "language": "csharp",
+      "timestamp": 1768828571
+    }
+  ]
+}

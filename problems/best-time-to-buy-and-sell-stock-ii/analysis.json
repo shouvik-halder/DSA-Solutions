@@ -1,0 +1,10 @@
+{
+  "pattern": "Greedy",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the prices array and accumulates profit whenever the current price is higher than the previous price. This greedy approach ensures that all profitable transactions are captured without needing to track individual buy and sell days.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Dynamic Programming"
+  ]
+}

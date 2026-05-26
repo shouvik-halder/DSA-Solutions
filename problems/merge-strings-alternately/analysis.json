@@ -1,0 +1,10 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses two pointers to iterate through both strings simultaneously, appending characters from each string to the output in an alternating fashion. Once one string is fully traversed, the remaining characters from the other string are appended to the output.",
+  "improvements": "Using a StringBuilder instead of string concatenation could improve performance due to reduced overhead from creating multiple string instances.",
+  "relatedPatterns": [
+    "String Manipulation"
+  ]
+}

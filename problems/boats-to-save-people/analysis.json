@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer technique after sorting the array of people. The left pointer starts from the beginning and the right pointer from the end, attempting to pair the lightest and heaviest individuals together to minimize the number of boats needed.",
+  "improvements": "Consider using a priority queue to handle cases with more complex weight distributions, although the current approach is efficient for the problem constraints.",
+  "relatedPatterns": [
+    "Greedy",
+    "Sorting"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "String Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution trims the input string to remove leading and trailing spaces, then splits it into an array of words based on spaces. It retrieves the last word from the array and returns its length.",
+  "improvements": "Instead of splitting the string into an array, iterate from the end of the string to find the last word, which can reduce space complexity to O(1).",
+  "relatedPatterns": [
+    "Two Pointers",
+    "String Traversal"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Merge Sorted Array",
+  "titleSlug": "merge-sorted-array",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1766619949",
+      "runtime": 0,
+      "memory": 46700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 83.12529999999998,
+      "language": "csharp",
+      "timestamp": 1757554095
+    }
+  ]
+}

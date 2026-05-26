@@ -1,0 +1,11 @@
+{
+  "pattern": "String Parsing",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the string to skip leading spaces, checks for a sign, and then processes numeric characters to build the integer result. It also handles overflow conditions for both positive and negative results.",
+  "improvements": "Consider using a more robust error handling mechanism for invalid inputs, such as throwing exceptions or returning a specific error code.",
+  "relatedPatterns": [
+    "Greedy",
+    "State Machine"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Two Sum",
+  "titleSlug": "two-sum",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1670126660",
+      "runtime": 1,
+      "memory": 49500000,
+      "runtimePercentile": 99.4138,
+      "memoryPercentile": 54.60410000000002,
+      "language": "csharp",
+      "timestamp": 1750396682
+    }
+  ]
+}

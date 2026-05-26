@@ -1,0 +1,20 @@
+{
+  "title": "Merge Two Sorted Lists",
+  "titleSlug": "merge-two-sorted-lists",
+  "difficulty": "EASY",
+  "tags": [
+    "Linked List",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1790003814",
+      "runtime": 0,
+      "memory": 43100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 68.8166,
+      "language": "csharp",
+      "timestamp": 1759483072
+    }
+  ]
+}

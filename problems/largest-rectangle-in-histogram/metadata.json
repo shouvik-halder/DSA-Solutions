@@ -1,0 +1,21 @@
+{
+  "title": "Largest Rectangle in Histogram",
+  "titleSlug": "largest-rectangle-in-histogram",
+  "difficulty": "HARD",
+  "tags": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1788892863",
+      "runtime": 6,
+      "memory": 57500000,
+      "runtimePercentile": 95.8848,
+      "memoryPercentile": 51.646100000000075,
+      "language": "csharp",
+      "timestamp": 1759384791
+    }
+  ]
+}

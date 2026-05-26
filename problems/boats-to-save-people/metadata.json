@@ -1,0 +1,22 @@
+{
+  "title": "Boats to Save People",
+  "titleSlug": "boats-to-save-people",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1768425620",
+      "runtime": 66,
+      "memory": 51400000,
+      "runtimePercentile": 34.83139999999999,
+      "memoryPercentile": 30.898600000000002,
+      "language": "csharp",
+      "timestamp": 1757693096
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Single Element in a Sorted Array",
+  "titleSlug": "single-element-in-a-sorted-array",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1729707226",
+      "runtime": 0,
+      "memory": 49900000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 93.9759,
+      "language": "csharp",
+      "timestamp": 1754802717
+    }
+  ]
+}

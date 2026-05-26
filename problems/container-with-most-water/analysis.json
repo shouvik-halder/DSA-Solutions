@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer approach, starting with one pointer at each end of the array. It calculates the area formed by the lines at these pointers and moves the pointer pointing to the shorter line inward to potentially find a larger area.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "Array"
+  ]
+}

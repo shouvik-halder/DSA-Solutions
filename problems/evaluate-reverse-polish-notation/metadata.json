@@ -1,0 +1,21 @@
+{
+  "title": "Evaluate Reverse Polish Notation",
+  "titleSlug": "evaluate-reverse-polish-notation",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Math",
+    "Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1769483750",
+      "runtime": 12,
+      "memory": 44500000,
+      "runtimePercentile": 8.6956,
+      "memoryPercentile": 48.061299999999974,
+      "language": "csharp",
+      "timestamp": 1757777064
+    }
+  ]
+}

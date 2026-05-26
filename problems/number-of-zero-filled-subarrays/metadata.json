@@ -1,0 +1,20 @@
+{
+  "title": "Number of Zero-Filled Subarrays",
+  "titleSlug": "number-of-zero-filled-subarrays",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Math"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2012738627",
+      "runtime": 2,
+      "memory": 59200000,
+      "runtimePercentile": 97.7011,
+      "memoryPercentile": 47.701100000000004,
+      "language": "csharp",
+      "timestamp": 1779722766
+    }
+  ]
+}

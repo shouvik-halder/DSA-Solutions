@@ -1,0 +1,20 @@
+{
+  "title": "Capacity To Ship Packages Within D Days",
+  "titleSlug": "capacity-to-ship-packages-within-d-days",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1891620990",
+      "runtime": 17,
+      "memory": 54000000,
+      "runtimePercentile": 50.5703,
+      "memoryPercentile": 20.912599999999983,
+      "language": "csharp",
+      "timestamp": 1768961738
+    }
+  ]
+}

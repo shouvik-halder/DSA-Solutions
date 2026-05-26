@@ -1,0 +1,22 @@
+{
+  "title": "Remove K Digits",
+  "titleSlug": "remove-k-digits",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1973195533",
+      "runtime": 10,
+      "memory": 45300000,
+      "runtimePercentile": 42.708500000000015,
+      "memoryPercentile": 51.04159999999998,
+      "language": "csharp",
+      "timestamp": 1775710424
+    }
+  ]
+}

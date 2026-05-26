@@ -1,0 +1,22 @@
+{
+  "title": "Majority Element II",
+  "titleSlug": "majority-element-ii",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2006817523",
+      "runtime": 1,
+      "memory": 52200000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 78.63219999999997,
+      "language": "csharp",
+      "timestamp": 1779154113
+    }
+  ]
+}

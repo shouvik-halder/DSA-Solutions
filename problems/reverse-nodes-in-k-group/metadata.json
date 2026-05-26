@@ -1,0 +1,20 @@
+{
+  "title": "Reverse Nodes in k-Group",
+  "titleSlug": "reverse-nodes-in-k-group",
+  "difficulty": "HARD",
+  "tags": [
+    "Linked List",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1968236392",
+      "runtime": 0,
+      "memory": 46800000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 94.69489999999999,
+      "language": "csharp",
+      "timestamp": 1775276513
+    }
+  ]
+}

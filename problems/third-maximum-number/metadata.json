@@ -1,0 +1,20 @@
+{
+  "title": "Third Maximum Number",
+  "titleSlug": "third-maximum-number",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2006509589",
+      "runtime": 0,
+      "memory": 43600000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 58.064499999999995,
+      "language": "csharp",
+      "timestamp": 1779119346
+    }
+  ]
+}

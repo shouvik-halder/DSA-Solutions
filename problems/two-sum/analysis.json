@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a hash table to store the indices of the numbers needed to reach the target sum. As it iterates through the array, it checks if the current number exists in the hash table, indicating that a pair has been found.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Two Pointers",
+    "Brute Force"
+  ]
+}

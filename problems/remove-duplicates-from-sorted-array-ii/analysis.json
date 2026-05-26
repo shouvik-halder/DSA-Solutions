@@ -1,0 +1,10 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer technique to traverse the sorted array while maintaining the allowed duplicates. It checks if the current element is different from the element two places back, and if so, it updates the next position for valid elements.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array Manipulation"
+  ]
+}

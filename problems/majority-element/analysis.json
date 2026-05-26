@@ -1,0 +1,11 @@
+{
+  "pattern": "Boyer-Moore Voting Algorithm",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The algorithm maintains a count of the current candidate for the majority element. It increments the count when the current element matches the candidate and decrements it otherwise. When the count reaches zero, it updates the candidate to the current element.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "Sorting"
+  ]
+}

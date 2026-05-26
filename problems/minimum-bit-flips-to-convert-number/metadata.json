@@ -1,0 +1,19 @@
+{
+  "title": "Minimum Bit Flips to Convert Number",
+  "titleSlug": "minimum-bit-flips-to-convert-number",
+  "difficulty": "EASY",
+  "tags": [
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1741553729",
+      "runtime": 0,
+      "memory": 29300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 11.267300000000011,
+      "language": "csharp",
+      "timestamp": 1755659817
+    }
+  ]
+}

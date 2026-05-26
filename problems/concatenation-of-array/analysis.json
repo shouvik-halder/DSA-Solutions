@@ -1,0 +1,11 @@
+{
+  "pattern": "Array Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution creates a new array of double the size of the input array and fills it by copying each element from the input array twice. This is done in a single loop that iterates through the input array.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Copying Arrays",
+    "Simulation"
+  ]
+}

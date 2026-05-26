@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers to traverse both linked lists simultaneously. It compares the values at each pointer and appends the smaller value to the result list, effectively merging the two sorted lists in a single pass.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List",
+    "Merge Sort"
+  ]
+}

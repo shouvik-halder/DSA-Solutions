@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers, slow and fast, to detect a cycle in the linked list. If a cycle exists, the two pointers will meet at some point, allowing the algorithm to find the start of the cycle by resetting one pointer to the head and moving both pointers at the same speed until they meet again.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Floyd's Tortoise and Hare",
+    "Linked List"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Count Good Numbers",
+  "titleSlug": "count-good-numbers",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Math",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1675652966",
+      "runtime": 0,
+      "memory": 28800000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 91.453,
+      "language": "csharp",
+      "timestamp": 1750829795
+    }
+  ]
+}

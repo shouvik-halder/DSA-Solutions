@@ -1,0 +1,11 @@
+{
+  "pattern": "Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a stack to keep track of the scores from the baseball game operations. It processes each operation in constant time, updating the stack accordingly and calculating the total score at the end.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array",
+    "Simulation"
+  ]
+}

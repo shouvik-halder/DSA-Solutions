@@ -1,0 +1,11 @@
+{
+  "pattern": "Merge Sort",
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(log n)",
+  "explanation": "The solution uses the Merge Sort algorithm to sort a linked list. It recursively divides the list into halves until it reaches base cases of single nodes, then merges the sorted halves back together.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer",
+    "Two Pointers"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution splits the input string into words using whitespace as a delimiter, reverses the array of words, and then joins them back into a single string. This approach efficiently handles leading, trailing, and multiple spaces by using StringSplitOptions.RemoveEmptyEntries.",
+  "improvements": "Consider using a single pass with a StringBuilder to avoid the overhead of creating an array and reversing it, which can improve performance for large strings.",
+  "relatedPatterns": [
+    "String Manipulation",
+    "Array Manipulation"
+  ]
+}

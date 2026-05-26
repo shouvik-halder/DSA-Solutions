@@ -1,0 +1,22 @@
+{
+  "title": "Reorder List",
+  "titleSlug": "reorder-list",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List",
+    "Two Pointers",
+    "Stack",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1790062070",
+      "runtime": 0,
+      "memory": 49900000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 23.555699999999987,
+      "language": "csharp",
+      "timestamp": 1759488140
+    }
+  ]
+}

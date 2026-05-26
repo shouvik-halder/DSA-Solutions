@@ -1,0 +1,11 @@
+{
+  "pattern": "Iterative",
+  "timeComplexity": "O(max(N, M))",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iteratively traverses both linked lists, adding corresponding digits along with any carry from the previous addition. It constructs a new linked list to store the result, ensuring to handle cases where the lists are of different lengths or when there's a carry left at the end.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List",
+    "Math"
+  ]
+}

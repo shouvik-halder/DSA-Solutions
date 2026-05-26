@@ -1,0 +1,11 @@
+{
+  "pattern": "Sorting",
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution sorts the array of strings and then compares the first and last strings to find the longest common prefix. This works because the common prefix will be the same for the lexicographically smallest and largest strings in the sorted order.",
+  "improvements": "Using a horizontal scanning approach could reduce the time complexity to O(n * m), where n is the number of strings and m is the length of the shortest string, making it more efficient for large datasets.",
+  "relatedPatterns": [
+    "Horizontal Scanning",
+    "Divide and Conquer"
+  ]
+}

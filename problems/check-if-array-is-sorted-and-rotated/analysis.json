@@ -1,0 +1,11 @@
+{
+  "pattern": "Linear Scan",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array to count the number of times the order of elements is inverted. If there is more than one inversion, the array cannot be sorted and rotated, so it returns false. The check at the end ensures the first and last elements are considered for the rotation.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array Traversal",
+    "Counting Inversions"
+  ]
+}

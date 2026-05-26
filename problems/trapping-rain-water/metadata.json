@@ -1,0 +1,23 @@
+{
+  "title": "Trapping Rain Water",
+  "titleSlug": "trapping-rain-water",
+  "difficulty": "HARD",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Dynamic Programming",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1970177491",
+      "runtime": 0,
+      "memory": 46900000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 47.56229999999999,
+      "language": "csharp",
+      "timestamp": 1775448892
+    }
+  ]
+}

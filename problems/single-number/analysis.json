@@ -1,0 +1,11 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the XOR operation to find the single number in the array. By XORing all the numbers together, pairs of identical numbers cancel each other out, leaving only the unique number.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "Linear Search"
+  ]
+}

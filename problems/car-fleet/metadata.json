@@ -1,0 +1,22 @@
+{
+  "title": "Car Fleet",
+  "titleSlug": "car-fleet",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Stack",
+    "Sorting",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1783012319",
+      "runtime": 82,
+      "memory": 78200000,
+      "runtimePercentile": 82.98949999999994,
+      "memoryPercentile": 24.225599999999805,
+      "language": "csharp",
+      "timestamp": 1758867308
+    }
+  ]
+}

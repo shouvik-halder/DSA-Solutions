@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(n log m)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses binary search to find the minimum eating speed that allows Koko to finish all the bananas within the given hours. It calculates the total time required for each potential speed and adjusts the search range based on whether the time exceeds the limit.",
+  "improvements": "Consider using a more efficient way to calculate total time without using Math.Ceiling, if possible, to reduce overhead.",
+  "relatedPatterns": [
+    "Greedy",
+    "Sorting"
+  ]
+}

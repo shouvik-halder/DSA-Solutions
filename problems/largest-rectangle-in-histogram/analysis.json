@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The algorithm uses a monotonic stack to keep track of the indices of the histogram bars. As it iterates through the heights, it calculates the area of rectangles formed by the bars when a shorter bar is encountered, ensuring that the maximum area is updated accordingly.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Stack",
+    "Dynamic Programming"
+  ]
+}

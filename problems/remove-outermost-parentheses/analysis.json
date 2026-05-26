@@ -1,0 +1,11 @@
+{
+  "pattern": "Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a balance counter to track the depth of parentheses while iterating through the string. It appends characters to the result only when the balance is greater than zero, effectively removing the outermost parentheses.",
+  "improvements": null,
+  "relatedPatterns": [
+    "String Manipulation",
+    "Greedy"
+  ]
+}

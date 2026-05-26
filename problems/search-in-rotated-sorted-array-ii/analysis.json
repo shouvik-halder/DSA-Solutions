@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a modified binary search to find the target in a rotated sorted array. It handles duplicates by incrementing or decrementing the low and high pointers when necessary, ensuring that all elements are considered.",
+  "improvements": "Consider using a more efficient approach if duplicates are rare, as the current solution can degrade to O(n) in the worst case.",
+  "relatedPatterns": [
+    "Search in Rotated Sorted Array",
+    "Binary Search on Sorted Array"
+  ]
+}

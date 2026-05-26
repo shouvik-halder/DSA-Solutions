@@ -1,0 +1,20 @@
+{
+  "title": "Delete the Middle Node of a Linked List",
+  "titleSlug": "delete-the-middle-node-of-a-linked-list",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1790075299",
+      "runtime": 2,
+      "memory": 92100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 83.81990000000005,
+      "language": "csharp",
+      "timestamp": 1759489299
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a monotonic stack to maintain the digits in a non-decreasing order while iterating through the number. It removes digits from the stack when the current digit is smaller than the top of the stack and there are still digits left to remove (k > 0).",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "Stack"
+  ]
+}

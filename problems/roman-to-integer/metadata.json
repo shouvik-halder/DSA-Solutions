@@ -1,0 +1,21 @@
+{
+  "title": "Roman to Integer",
+  "titleSlug": "roman-to-integer",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "Math",
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1963380823",
+      "runtime": 8,
+      "memory": 49100000,
+      "runtimePercentile": 12.141500000000002,
+      "memoryPercentile": 89.5574,
+      "language": "csharp",
+      "timestamp": 1774839671
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(n log(max(nums)))",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution employs binary search to find the smallest divisor by checking the sum of the quotients of the array elements divided by a mid value. If the sum is less than or equal to the threshold, it narrows the search to smaller divisors; otherwise, it searches larger divisors.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "Divide and Conquer"
+  ]
+}

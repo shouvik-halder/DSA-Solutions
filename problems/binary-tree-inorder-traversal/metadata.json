@@ -1,0 +1,22 @@
+{
+  "title": "Binary Tree Inorder Traversal",
+  "titleSlug": "binary-tree-inorder-traversal",
+  "difficulty": "EASY",
+  "tags": [
+    "Stack",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1791908072",
+      "runtime": 0,
+      "memory": 46700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 42.41019999999999,
+      "language": "csharp",
+      "timestamp": 1759648719
+    }
+  ]
+}

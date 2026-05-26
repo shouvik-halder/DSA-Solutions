@@ -1,0 +1,20 @@
+{
+  "title": "Number of Senior Citizens",
+  "titleSlug": "number-of-senior-citizens",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1636371451",
+      "runtime": 0,
+      "memory": 42500000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 94.3396,
+      "language": "csharp",
+      "timestamp": 1747485184
+    }
+  ]
+}

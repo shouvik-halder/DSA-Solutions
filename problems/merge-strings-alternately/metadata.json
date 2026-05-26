@@ -1,0 +1,20 @@
+{
+  "title": "Merge Strings Alternately",
+  "titleSlug": "merge-strings-alternately",
+  "difficulty": "EASY",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1766600766",
+      "runtime": 52,
+      "memory": 41700000,
+      "runtimePercentile": 96.80239999999999,
+      "memoryPercentile": 5.579999999999988,
+      "language": "csharp",
+      "timestamp": 1757551350
+    }
+  ]
+}

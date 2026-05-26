@@ -1,0 +1,20 @@
+{
+  "title": "Min Stack",
+  "titleSlug": "min-stack",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Stack",
+    "Design"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1769466786",
+      "runtime": 2,
+      "memory": 54800000,
+      "runtimePercentile": 69.2737,
+      "memoryPercentile": 52.62579999999999,
+      "language": "csharp",
+      "timestamp": 1757776559
+    }
+  ]
+}

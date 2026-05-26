@@ -1,0 +1,21 @@
+{
+  "title": "Add Two Numbers",
+  "titleSlug": "add-two-numbers",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List",
+    "Math",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1790642512",
+      "runtime": 1,
+      "memory": 53400000,
+      "runtimePercentile": 93.8438,
+      "memoryPercentile": 20.123900000000074,
+      "language": "csharp",
+      "timestamp": 1759544610
+    }
+  ]
+}

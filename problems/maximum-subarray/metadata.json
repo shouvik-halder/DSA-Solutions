@@ -1,0 +1,21 @@
+{
+  "title": "Maximum Subarray",
+  "titleSlug": "maximum-subarray",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Divide and Conquer",
+    "Dynamic Programming"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1889514601",
+      "runtime": 1,
+      "memory": 64200000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 38.693999999999946,
+      "language": "csharp",
+      "timestamp": 1768800146
+    }
+  ]
+}

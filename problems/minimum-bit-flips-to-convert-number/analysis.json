@@ -1,0 +1,11 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(b)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the XOR operation to identify the bits that differ between the two numbers. It then counts the number of set bits in the result, which corresponds to the minimum number of bit flips required to convert the start number to the goal number.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hamming Distance",
+    "Bitwise Operations"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "pattern": "Iteration",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through each string in the details array, extracting the age from specific character positions. It counts how many of these ages are greater than 60 and returns that count.",
+  "improvements": null,
+  "relatedPatterns": []
+}

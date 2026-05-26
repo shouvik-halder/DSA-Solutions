@@ -1,0 +1,10 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a binary search approach to efficiently find the single non-duplicate element in a sorted array. By checking the parity of the mid index and comparing the mid element with its neighbors, the search space is halved in each iteration until the single element is found.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer"
+  ]
+}

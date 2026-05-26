@@ -1,0 +1,20 @@
+{
+  "title": "Product of Array Except Self",
+  "titleSlug": "product-of-array-except-self",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1769220084",
+      "runtime": 4,
+      "memory": 66500000,
+      "runtimePercentile": 13.149700000000001,
+      "memoryPercentile": 5.300699999999943,
+      "language": "csharp",
+      "timestamp": 1757764370
+    }
+  ]
+}

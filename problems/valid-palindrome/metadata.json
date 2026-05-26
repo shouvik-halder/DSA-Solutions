@@ -1,0 +1,20 @@
+{
+  "title": "Valid Palindrome",
+  "titleSlug": "valid-palindrome",
+  "difficulty": "EASY",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1766114371",
+      "runtime": 12,
+      "memory": 44800000,
+      "runtimePercentile": 82.7267,
+      "memoryPercentile": 71.31400000000001,
+      "language": "csharp",
+      "timestamp": 1757514176
+    }
+  ]
+}

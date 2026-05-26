@@ -1,0 +1,21 @@
+{
+  "title": "Two Sum II - Input Array Is Sorted",
+  "titleSlug": "two-sum-ii-input-array-is-sorted",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1766626428",
+      "runtime": 0,
+      "memory": 50900000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 5.611899999999975,
+      "language": "csharp",
+      "timestamp": 1757554956
+    }
+  ]
+}

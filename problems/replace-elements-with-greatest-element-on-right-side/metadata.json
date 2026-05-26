@@ -1,0 +1,19 @@
+{
+  "title": "Replace Elements with Greatest Element on Right Side",
+  "titleSlug": "replace-elements-with-greatest-element-on-right-side",
+  "difficulty": "EASY",
+  "tags": [
+    "Array"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1636341742",
+      "runtime": 1,
+      "memory": 70400000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 100.0,
+      "language": "csharp",
+      "timestamp": 1747482405
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a stack to keep track of opening parentheses. For each character in the string, it checks if it's a closing parenthesis and matches it with the top of the stack, ensuring that all parentheses are properly closed and nested.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "Backtracking"
+  ]
+}

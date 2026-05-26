@@ -1,0 +1,21 @@
+{
+  "title": "Largest Odd Number in String",
+  "titleSlug": "largest-odd-number-in-string",
+  "difficulty": "EASY",
+  "tags": [
+    "Math",
+    "String",
+    "Greedy"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1675515867",
+      "runtime": 1,
+      "memory": 48000000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 90.99099999999997,
+      "language": "csharp",
+      "timestamp": 1750819917
+    }
+  ]
+}

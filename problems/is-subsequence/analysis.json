@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers to traverse both strings, incrementing the pointer for the subsequence string 's' only when a matching character is found in string 't'. If the pointer for 's' reaches its length, it confirms that 's' is a subsequence of 't'.",
+  "improvements": null,
+  "relatedPatterns": [
+    "String Matching",
+    "Dynamic Programming"
+  ]
+}

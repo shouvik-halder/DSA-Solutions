@@ -1,0 +1,19 @@
+{
+  "title": "Length of Last Word",
+  "titleSlug": "length-of-last-word",
+  "difficulty": "EASY",
+  "tags": [
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1636365498",
+      "runtime": 0,
+      "memory": 39600000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 88.6656,
+      "language": "csharp",
+      "timestamp": 1747484613
+    }
+  ]
+}

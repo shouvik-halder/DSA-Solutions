@@ -1,0 +1,22 @@
+{
+  "title": "Find the Duplicate Number",
+  "titleSlug": "find-the-duplicate-number",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1790657637",
+      "runtime": 3,
+      "memory": 69500000,
+      "runtimePercentile": 90.9465,
+      "memoryPercentile": 88.88880000000002,
+      "language": "csharp",
+      "timestamp": 1759546872
+    }
+  ]
+}

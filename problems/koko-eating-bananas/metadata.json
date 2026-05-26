@@ -1,0 +1,20 @@
+{
+  "title": "Koko Eating Bananas",
+  "titleSlug": "koko-eating-bananas",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1788964349",
+      "runtime": 11,
+      "memory": 49500000,
+      "runtimePercentile": 72.33729999999998,
+      "memoryPercentile": 53.402399999999986,
+      "language": "csharp",
+      "timestamp": 1759389900
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Odd Even Linked List",
+  "titleSlug": "odd-even-linked-list",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1964845451",
+      "runtime": 0,
+      "memory": 47200000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 5.459600000000005,
+      "language": "csharp",
+      "timestamp": 1774961479
+    }
+  ]
+}

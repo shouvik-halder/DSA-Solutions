@@ -1,0 +1,22 @@
+{
+  "title": "Invert Binary Tree",
+  "titleSlug": "invert-binary-tree",
+  "difficulty": "EASY",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1792284909",
+      "runtime": 0,
+      "memory": 41600000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 46.31279999999999,
+      "language": "csharp",
+      "timestamp": 1759677681
+    }
+  ]
+}

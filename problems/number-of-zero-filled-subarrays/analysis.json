@@ -1,0 +1,11 @@
+{
+  "pattern": "Iterative Counting",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array while maintaining a count of consecutive zeros. For each zero encountered, it increments the count and adds it to the total, while resetting the count when a non-zero is found.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sliding Window",
+    "Prefix Sum"
+  ]
+}

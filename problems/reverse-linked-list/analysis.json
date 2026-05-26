@@ -1,0 +1,10 @@
+{
+  "pattern": "Iterative",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses an iterative approach to reverse the linked list by maintaining pointers to the current node, previous node, and the next node. It iteratively updates the next pointer of each node to point to the previous node until all nodes are reversed.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Recursion"
+  ]
+}

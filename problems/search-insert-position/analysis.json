@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a binary search approach to efficiently find the position to insert the target in a sorted array. It maintains a range defined by low and high indices, adjusting these based on comparisons with the middle element until the correct position is found.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Search",
+    "Divide and Conquer"
+  ]
+}

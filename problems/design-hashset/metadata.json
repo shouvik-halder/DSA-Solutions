@@ -1,0 +1,23 @@
+{
+  "title": "Design HashSet",
+  "titleSlug": "design-hashset",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Linked List",
+    "Design",
+    "Hash Function"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1750157619",
+      "runtime": 12,
+      "memory": 72900000,
+      "runtimePercentile": 37.07859999999999,
+      "memoryPercentile": 14.60649999999998,
+      "language": "csharp",
+      "timestamp": 1756299127
+    }
+  ]
+}

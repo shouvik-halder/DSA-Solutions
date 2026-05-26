@@ -1,0 +1,11 @@
+{
+  "pattern": "Depth-First Search",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(h)",
+  "explanation": "The algorithm recursively swaps the left and right children of each node in the binary tree. It continues this process until it reaches the leaf nodes, effectively inverting the entire tree.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Recursion",
+    "Tree Traversal"
+  ]
+}

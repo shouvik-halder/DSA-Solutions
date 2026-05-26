@@ -1,0 +1,21 @@
+{
+  "title": "Search a 2D Matrix",
+  "titleSlug": "search-a-2d-matrix",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Matrix"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1788945079",
+      "runtime": 0,
+      "memory": 44700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 7.933999999999975,
+      "language": "csharp",
+      "timestamp": 1759388479
+    }
+  ]
+}

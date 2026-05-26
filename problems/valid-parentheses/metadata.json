@@ -1,0 +1,20 @@
+{
+  "title": "Valid Parentheses",
+  "titleSlug": "valid-parentheses",
+  "difficulty": "EASY",
+  "tags": [
+    "String",
+    "Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1769431617",
+      "runtime": 5,
+      "memory": 42300000,
+      "runtimePercentile": 38.858700000000006,
+      "memoryPercentile": 43.75259999999999,
+      "language": "csharp",
+      "timestamp": 1757775581
+    }
+  ]
+}

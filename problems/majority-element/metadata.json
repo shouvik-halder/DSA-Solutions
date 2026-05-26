@@ -1,0 +1,23 @@
+{
+  "title": "Majority Element",
+  "titleSlug": "majority-element",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Divide and Conquer",
+    "Sorting",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2006805465",
+      "runtime": 0,
+      "memory": 46300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 70.91249999999998,
+      "language": "csharp",
+      "timestamp": 1779151723
+    }
+  ]
+}

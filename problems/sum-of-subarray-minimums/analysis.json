@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses two monotonic stacks to find the next smaller element (NSE) and previous smaller element (PSE) for each element in the array. This allows for efficient calculation of the contribution of each element to the sum of subarray minimums based on its position relative to these boundaries.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Dynamic Programming",
+    "Stack"
+  ]
+}

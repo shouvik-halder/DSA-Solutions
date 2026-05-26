@@ -1,0 +1,21 @@
+{
+  "title": "Append Characters to String to Make Subsequence",
+  "titleSlug": "append-characters-to-string-to-make-subsequence",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Greedy"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1636358274",
+      "runtime": 1,
+      "memory": 45100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 90.00010000000002,
+      "language": "csharp",
+      "timestamp": 1747483948
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Binary Search",
+  "titleSlug": "binary-search",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1728830656",
+      "runtime": 0,
+      "memory": 52800000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 78.64030000000001,
+      "language": "csharp",
+      "timestamp": 1754734311
+    }
+  ]
+}

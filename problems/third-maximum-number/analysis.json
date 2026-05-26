@@ -1,0 +1,11 @@
+{
+  "pattern": "Single Pass with Conditional Updates",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array while maintaining the top three unique maximum values using long variables to avoid integer overflow. It skips duplicates and updates the maximums accordingly, ensuring that the third maximum is returned if it exists, or the maximum otherwise.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sorting",
+    "Heap"
+  ]
+}

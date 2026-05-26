@@ -1,0 +1,20 @@
+{
+  "title": "Remove Nth Node From End of List",
+  "titleSlug": "remove-nth-node-from-end-of-list",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1964875099",
+      "runtime": 0,
+      "memory": 42700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 7.7061000000000135,
+      "language": "csharp",
+      "timestamp": 1774963588
+    }
+  ]
+}

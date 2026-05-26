@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(1) on average for Add, Remove, and Contains",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a hash table implemented with an array of linked lists to handle collisions. Each key is hashed to an index in the array, and linked lists are used to store multiple keys that hash to the same index.",
+  "improvements": "Consider using a dynamic array or resizing the hash table to reduce the load factor and improve performance in cases of high collision.",
+  "relatedPatterns": [
+    "Linked List",
+    "Chaining"
+  ]
+}

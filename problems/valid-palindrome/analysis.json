@@ -1,0 +1,10 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers to traverse the string from both ends towards the center, skipping non-alphanumeric characters. It compares the characters at both pointers after converting them to lowercase, ensuring that the string is a palindrome.",
+  "improvements": null,
+  "relatedPatterns": [
+    "String Manipulation"
+  ]
+}

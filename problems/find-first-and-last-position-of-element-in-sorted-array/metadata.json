@@ -1,0 +1,20 @@
+{
+  "title": "Find First and Last Position of Element in Sorted Array",
+  "titleSlug": "find-first-and-last-position-of-element-in-sorted-array",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1891605389",
+      "runtime": 0,
+      "memory": 50100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 8.531400000000025,
+      "language": "csharp",
+      "timestamp": 1768959762
+    }
+  ]
+}

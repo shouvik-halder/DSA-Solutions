@@ -1,0 +1,11 @@
+{
+  "pattern": "Recursion",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n/k)",
+  "explanation": "The algorithm recursively processes the linked list in groups of k nodes. It first checks if there are enough nodes to reverse; if so, it reverses the current group and connects it to the result of the next group.",
+  "improvements": "Consider using an iterative approach to reduce the space complexity from O(n/k) to O(1).",
+  "relatedPatterns": [
+    "Linked List",
+    "Two Pointers"
+  ]
+}

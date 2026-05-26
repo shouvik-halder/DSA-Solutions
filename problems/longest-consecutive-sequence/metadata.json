@@ -1,0 +1,21 @@
+{
+  "title": "Longest Consecutive Sequence",
+  "titleSlug": "longest-consecutive-sequence",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Union-Find"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1727978019",
+      "runtime": 42,
+      "memory": 74000000,
+      "runtimePercentile": 47.43339999999999,
+      "memoryPercentile": 32.89970000000003,
+      "language": "csharp",
+      "timestamp": 1754659871
+    }
+  ]
+}

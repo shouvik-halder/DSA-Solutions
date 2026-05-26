@@ -1,0 +1,21 @@
+{
+  "title": "Is Subsequence",
+  "titleSlug": "is-subsequence",
+  "difficulty": "EASY",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1636352346",
+      "runtime": 0,
+      "memory": 41700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 53.75440000000001,
+      "language": "csharp",
+      "timestamp": 1747483387
+    }
+  ]
+}

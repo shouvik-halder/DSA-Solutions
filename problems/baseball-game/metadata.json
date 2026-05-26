@@ -1,0 +1,21 @@
+{
+  "title": "Baseball Game",
+  "titleSlug": "baseball-game",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Stack",
+    "Simulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1769238724",
+      "runtime": 4,
+      "memory": 42200000,
+      "runtimePercentile": 27.542399999999997,
+      "memoryPercentile": 9.321999999999992,
+      "language": "csharp",
+      "timestamp": 1757765883
+    }
+  ]
+}

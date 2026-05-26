@@ -1,0 +1,11 @@
+{
+  "pattern": "Dynamic Programming",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the prices array while maintaining the index of the minimum price seen so far. It calculates the potential profit at each price and updates the maximum profit accordingly.",
+  "improvements": "Consider adding input validation to handle edge cases such as empty arrays.",
+  "relatedPatterns": [
+    "Greedy",
+    "Sliding Window"
+  ]
+}

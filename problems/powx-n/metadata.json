@@ -1,0 +1,20 @@
+{
+  "title": "Pow(x, n)",
+  "titleSlug": "powx-n",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Math",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1675651580",
+      "runtime": 0,
+      "memory": 29300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 47.344099999999976,
+      "language": "csharp",
+      "timestamp": 1750829714
+    }
+  ]
+}

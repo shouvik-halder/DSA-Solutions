@@ -1,0 +1,8 @@
+{
+  "pattern": "Iterative",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through each character of the Roman numeral string, converting each character to its integer value using a helper function. It checks if the current value is less than the next value to determine whether to add or subtract the current value from the result.",
+  "improvements": null,
+  "relatedPatterns": []
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log(m) + log(n))",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution first uses binary search to find the correct row in the 2D matrix where the target could exist. Once the row is identified, it performs another binary search within that row to locate the target.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Matrix Search",
+    "Divide and Conquer"
+  ]
+}

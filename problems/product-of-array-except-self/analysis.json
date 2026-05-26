@@ -1,0 +1,11 @@
+{
+  "pattern": "Prefix Product",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two passes to compute the product of all elements except the current one. In the first pass, it calculates the prefix product, and in the second pass, it multiplies the result with the suffix product, all while using a single output array.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Cumulative Sum",
+    "Dynamic Programming"
+  ]
+}

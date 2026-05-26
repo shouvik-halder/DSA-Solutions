@@ -1,0 +1,11 @@
+{
+  "pattern": "Boyer-Moore Voting Algorithm",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a modified Boyer-Moore Voting Algorithm to identify potential majority elements by maintaining two candidate elements and their counts. It then verifies if these candidates appear more than n/3 times in the array.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "Counting"
+  ]
+}

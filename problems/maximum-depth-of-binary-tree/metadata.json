@@ -1,0 +1,22 @@
+{
+  "title": "Maximum Depth of Binary Tree",
+  "titleSlug": "maximum-depth-of-binary-tree",
+  "difficulty": "EASY",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1792295978",
+      "runtime": 0,
+      "memory": 43300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 91.8998,
+      "language": "csharp",
+      "timestamp": 1759678458
+    }
+  ]
+}

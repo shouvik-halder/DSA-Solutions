@@ -1,0 +1,20 @@
+{
+  "title": "Simplify Path",
+  "titleSlug": "simplify-path",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "String",
+    "Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1773786424",
+      "runtime": 5,
+      "memory": 44400000,
+      "runtimePercentile": 28.3924,
+      "memoryPercentile": 13.778799999999983,
+      "language": "csharp",
+      "timestamp": 1758107373
+    }
+  ]
+}

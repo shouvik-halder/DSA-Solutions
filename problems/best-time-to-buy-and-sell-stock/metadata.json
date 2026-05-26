@@ -1,0 +1,20 @@
+{
+  "title": "Best Time to Buy and Sell Stock",
+  "titleSlug": "best-time-to-buy-and-sell-stock",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1889753486",
+      "runtime": 2,
+      "memory": 59200000,
+      "runtimePercentile": 15.310900000000004,
+      "memoryPercentile": 13.517199999999985,
+      "language": "csharp",
+      "timestamp": 1768819021
+    }
+  ]
+}

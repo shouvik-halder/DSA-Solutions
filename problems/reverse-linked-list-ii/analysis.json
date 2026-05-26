@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The algorithm uses a two-pointer technique to reverse a sublist of a linked list between the given positions. It first navigates to the start of the sublist, then reverses the nodes within the specified range while maintaining the connections to the rest of the list.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List Manipulation",
+    "In-Place Reversal"
+  ]
+}

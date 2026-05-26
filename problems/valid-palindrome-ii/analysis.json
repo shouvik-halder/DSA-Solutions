@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer technique to check if the string can be a palindrome by allowing at most one character removal. If a mismatch is found, it checks both possibilities of skipping either the left or right character using a helper function to verify if the remaining substring is a palindrome.",
+  "improvements": null,
+  "relatedPatterns": [
+    "String Manipulation",
+    "Greedy"
+  ]
+}

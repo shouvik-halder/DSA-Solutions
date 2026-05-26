@@ -1,0 +1,20 @@
+{
+  "title": "Remove Element",
+  "titleSlug": "remove-element",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005267815",
+      "runtime": 0,
+      "memory": 46500000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 87.3749,
+      "language": "csharp",
+      "timestamp": 1778997808
+    }
+  ]
+}

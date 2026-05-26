@@ -1,0 +1,10 @@
+{
+  "pattern": "Dynamic Programming",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a dynamic programming approach to find the maximum subarray sum by iterating through the array and maintaining a running sum. It updates the maximum sum encountered so far based on the current sum and the current element.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Kadane's Algorithm"
+  ]
+}

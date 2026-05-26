@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses binary search to find the first and last occurrences of the target in a sorted array. It performs two separate binary searches: one for the first occurrence and another for the last occurrence, ensuring efficient retrieval of indices.",
+  "improvements": "The code could be optimized by combining the two searches into a single binary search that returns both indices, reducing the number of iterations.",
+  "relatedPatterns": [
+    "Divide and Conquer",
+    "Search Algorithms"
+  ]
+}

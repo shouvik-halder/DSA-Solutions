@@ -1,0 +1,20 @@
+{
+  "title": "Reverse String",
+  "titleSlug": "reverse-string",
+  "difficulty": "EASY",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1766011824",
+      "runtime": 0,
+      "memory": 64900000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 66.90870000000001,
+      "language": "csharp",
+      "timestamp": 1757507674
+    }
+  ]
+}

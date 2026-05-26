@@ -1,0 +1,20 @@
+{
+  "title": "Next Permutation",
+  "titleSlug": "next-permutation",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1722734021",
+      "runtime": 0,
+      "memory": 47300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 51.08960000000001,
+      "language": "csharp",
+      "timestamp": 1754290915
+    }
+  ]
+}

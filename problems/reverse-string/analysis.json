@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers, one starting at the beginning and the other at the end of the character array. It swaps the characters at these pointers and moves them towards the center until they meet, effectively reversing the string in place.",
+  "improvements": null,
+  "relatedPatterns": [
+    "In-place Algorithm",
+    "Swapping"
+  ]
+}

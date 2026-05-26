@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a three-way partitioning approach with two pointers to sort the array in a single pass. The 'low' pointer tracks the position for 0s, the 'high' pointer tracks the position for 2s, and the 'mid' pointer traverses the array.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sorting",
+    "Partitioning"
+  ]
+}

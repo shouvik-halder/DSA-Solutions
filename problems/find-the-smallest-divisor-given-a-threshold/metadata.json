@@ -1,0 +1,20 @@
+{
+  "title": "Find the Smallest Divisor Given a Threshold",
+  "titleSlug": "find-the-smallest-divisor-given-a-threshold",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1673795443",
+      "runtime": 14,
+      "memory": 49800000,
+      "runtimePercentile": 43.678099999999986,
+      "memoryPercentile": 42.52849999999999,
+      "language": "csharp",
+      "timestamp": 1750687769
+    }
+  ]
+}

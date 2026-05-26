@@ -1,0 +1,20 @@
+{
+  "title": "Concatenation of Array",
+  "titleSlug": "concatenation-of-array",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Simulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1747213410",
+      "runtime": 0,
+      "memory": 52100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 34.05989999999999,
+      "language": "csharp",
+      "timestamp": 1756087393
+    }
+  ]
+}

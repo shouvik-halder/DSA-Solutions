@@ -1,0 +1,11 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(n log m)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses binary search to find the minimum capacity required to ship all packages within the given number of days. It checks each mid-point capacity by simulating the shipping process and counting the number of days needed.",
+  "improvements": "Consider implementing a more efficient way to calculate the number of days used, potentially reducing the overhead of the linear scan.",
+  "relatedPatterns": [
+    "Greedy",
+    "Prefix Sum"
+  ]
+}

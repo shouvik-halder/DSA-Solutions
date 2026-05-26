@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses two pointers to separate positive and negative numbers while maintaining their respective positions in the output array. It iterates through the input array, placing positive numbers at even indices and negative numbers at odd indices.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array",
+    "Simulation"
+  ]
+}

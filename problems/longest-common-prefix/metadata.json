@@ -1,0 +1,21 @@
+{
+  "title": "Longest Common Prefix",
+  "titleSlug": "longest-common-prefix",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "String",
+    "Trie"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1845037815",
+      "runtime": 1,
+      "memory": 43400000,
+      "runtimePercentile": 90.3515,
+      "memoryPercentile": 47.344800000000006,
+      "language": "csharp",
+      "timestamp": 1764681886
+    }
+  ]
+}

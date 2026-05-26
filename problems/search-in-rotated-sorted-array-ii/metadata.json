@@ -1,0 +1,20 @@
+{
+  "title": "Search in Rotated Sorted Array II",
+  "titleSlug": "search-in-rotated-sorted-array-ii",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1729004177",
+      "runtime": 0,
+      "memory": 45600000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 37.727199999999996,
+      "language": "csharp",
+      "timestamp": 1754747223
+    }
+  ]
+}

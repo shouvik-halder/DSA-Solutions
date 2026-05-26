@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the two-pointer technique to find the middle of the linked list, then reverses the second half of the list. Finally, it merges the two halves in the required order.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List",
+    "Stack"
+  ]
+}

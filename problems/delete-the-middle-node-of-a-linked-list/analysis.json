@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the two-pointer technique to find the middle node of the linked list. The 'slow' pointer moves one step at a time while the 'fast' pointer moves two steps, allowing us to identify the middle node efficiently. Once found, the middle node is removed by adjusting the pointers.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List",
+    "Fast and Slow Pointers"
+  ]
+}

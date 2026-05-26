@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The algorithm identifies the rightmost ascent in the array to find the pivot, then locates the next greater element to swap with the pivot. Finally, it reverses the subarray after the pivot to achieve the next permutation in lexicographical order.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "Backtracking"
+  ]
+}

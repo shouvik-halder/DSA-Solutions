@@ -1,0 +1,10 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a modified binary search to find the minimum element in a rotated sorted array. It compares the middle element with the low and high pointers to determine which half of the array to search next.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer"
+  ]
+}

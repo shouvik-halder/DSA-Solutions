@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers to traverse both strings, incrementing the pointer for string 's' and the pointer for string 't' when characters match. If all characters of 't' are found in 's', the function returns 0; otherwise, it calculates how many characters need to be appended to 's' to make 't' a subsequence.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Greedy",
+    "String"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "4Sum",
+  "titleSlug": "4sum",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1768037959",
+      "runtime": 42,
+      "memory": 48400000,
+      "runtimePercentile": 16.2125,
+      "memoryPercentile": 87.3744,
+      "language": "csharp",
+      "timestamp": 1757664347
+    }
+  ]
+}

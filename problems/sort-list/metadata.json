@@ -1,0 +1,23 @@
+{
+  "title": "Sort List",
+  "titleSlug": "sort-list",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Linked List",
+    "Two Pointers",
+    "Divide and Conquer",
+    "Sorting",
+    "Merge Sort"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1967325906",
+      "runtime": 32,
+      "memory": 75300000,
+      "runtimePercentile": 88.15780000000005,
+      "memoryPercentile": 36.40310000000018,
+      "language": "csharp",
+      "timestamp": 1775187496
+    }
+  ]
+}

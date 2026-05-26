@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a two-pointer approach where one pointer starts at the beginning of the array and the other at the end. By adjusting the pointers based on the sum of the values at these indices compared to the target, the algorithm efficiently finds the two indices that sum to the target.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Binary Search",
+    "Sorting"
+  ]
+}

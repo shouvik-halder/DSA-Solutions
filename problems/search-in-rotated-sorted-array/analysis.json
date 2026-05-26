@@ -1,0 +1,10 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution utilizes a modified binary search to find the target in a rotated sorted array. It checks which part of the array is sorted and narrows down the search space accordingly based on the target's value.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer"
+  ]
+}

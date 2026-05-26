@@ -1,0 +1,20 @@
+{
+  "title": "Middle of the Linked List",
+  "titleSlug": "middle-of-the-linked-list",
+  "difficulty": "EASY",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1964560523",
+      "runtime": 0,
+      "memory": 41300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 50.21159999999999,
+      "language": "csharp",
+      "timestamp": 1774938935
+    }
+  ]
+}

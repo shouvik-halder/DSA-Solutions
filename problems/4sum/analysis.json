@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n^3)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a recursive KSum function to find quadruplets that sum to the target. It sorts the input array and employs two pointers to efficiently find pairs that complement the current selection of numbers.",
+  "improvements": "Consider using a HashSet to store results to avoid duplicates more efficiently.",
+  "relatedPatterns": [
+    "Backtracking",
+    "Sorting"
+  ]
+}

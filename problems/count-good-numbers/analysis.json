@@ -1,0 +1,11 @@
+{
+  "pattern": "Exponentiation by Squaring",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution calculates the number of good numbers by determining the number of choices for even and odd positions separately. It uses modular exponentiation to efficiently compute the powers of 5 and 4, which represent the choices for even and odd indexed positions respectively.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Modular Arithmetic",
+    "Dynamic Programming"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "pattern": "Greedy",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the string from the end to the beginning, checking each digit to find the largest odd digit. Once an odd digit is found, it returns the substring from the start to that digit, ensuring it is the largest possible odd number.",
+  "improvements": null,
+  "relatedPatterns": [
+    "String Manipulation"
+  ]
+}

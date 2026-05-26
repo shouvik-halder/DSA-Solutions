@@ -1,0 +1,11 @@
+{
+  "pattern": "Reverse Iteration",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array from the end to the beginning, keeping track of the maximum element seen so far. Each element is replaced with this maximum value, effectively achieving the desired transformation in a single pass.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array Manipulation",
+    "In-Place Replacement"
+  ]
+}

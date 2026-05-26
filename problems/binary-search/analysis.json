@@ -1,0 +1,10 @@
+{
+  "pattern": "Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution implements a binary search algorithm to find the target value in a sorted array. It repeatedly divides the search interval in half, adjusting the low and high pointers based on the comparison of the middle element with the target.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer"
+  ]
+}

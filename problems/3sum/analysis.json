@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution first sorts the array, then uses a loop to fix one element and applies the two-pointer technique to find pairs that sum to the negative of the fixed element. This efficiently finds all unique triplets that sum to zero.",
+  "improvements": "Consider using a hash set to store results to avoid duplicates more efficiently, though the current approach already handles duplicates well.",
+  "relatedPatterns": [
+    "Sorting",
+    "Hashing"
+  ]
+}

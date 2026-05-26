@@ -1,0 +1,21 @@
+{
+  "title": "3Sum",
+  "titleSlug": "3sum",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1767876835",
+      "runtime": 31,
+      "memory": 66300000,
+      "runtimePercentile": 95.46770000000001,
+      "memoryPercentile": 31.973699999999955,
+      "language": "csharp",
+      "timestamp": 1757653253
+    }
+  ]
+}

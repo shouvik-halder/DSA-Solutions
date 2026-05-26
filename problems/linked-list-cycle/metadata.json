@@ -1,0 +1,21 @@
+{
+  "title": "Linked List Cycle",
+  "titleSlug": "linked-list-cycle",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "Linked List",
+    "Two Pointers"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1964569619",
+      "runtime": 96,
+      "memory": 48900000,
+      "runtimePercentile": 76.82630000000005,
+      "memoryPercentile": 91.54120000000002,
+      "language": "csharp",
+      "timestamp": 1774939523
+    }
+  ]
+}

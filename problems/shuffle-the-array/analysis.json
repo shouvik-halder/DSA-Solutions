@@ -1,0 +1,11 @@
+{
+  "pattern": "In-place Array Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution modifies the input array in-place by encoding the second half of the array into the first half using a mathematical trick. It uses a maximum value to ensure that both original and new values can coexist in the same array until the final division step.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array Reordering",
+    "In-place Algorithms"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Max Consecutive Ones",
+  "titleSlug": "max-consecutive-ones",
+  "difficulty": "EASY",
+  "tags": [
+    "Array"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2005960075",
+      "runtime": 1,
+      "memory": 50400000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 86.49560000000002,
+      "language": "csharp",
+      "timestamp": 1779068773
+    }
+  ]
+}

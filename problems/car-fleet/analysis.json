@@ -1,0 +1,11 @@
+{
+  "pattern": "Monotonic Stack",
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution sorts the cars based on their positions in descending order and calculates the time taken for each car to reach the target. By comparing the time taken for each car, it determines the number of fleets formed, where a fleet is formed when a car takes longer than the previous one.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sorting",
+    "Greedy"
+  ]
+}

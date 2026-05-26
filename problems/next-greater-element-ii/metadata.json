@@ -1,0 +1,21 @@
+{
+  "title": "Next Greater Element II",
+  "titleSlug": "next-greater-element-ii",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1970097559",
+      "runtime": 8,
+      "memory": 61300000,
+      "runtimePercentile": 37.56340000000001,
+      "memoryPercentile": 14.720799999999983,
+      "language": "csharp",
+      "timestamp": 1775438214
+    }
+  ]
+}

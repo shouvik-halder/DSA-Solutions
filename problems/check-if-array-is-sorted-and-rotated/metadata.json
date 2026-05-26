@@ -1,0 +1,19 @@
+{
+  "title": "Check if Array Is Sorted and Rotated",
+  "titleSlug": "check-if-array-is-sorted-and-rotated",
+  "difficulty": "EASY",
+  "tags": [
+    "Array"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1884752456",
+      "runtime": 0,
+      "memory": 43400000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 30.636400000000016,
+      "language": "csharp",
+      "timestamp": 1768390202
+    }
+  ]
+}

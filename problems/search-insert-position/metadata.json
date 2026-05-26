@@ -1,0 +1,20 @@
+{
+  "title": "Search Insert Position",
+  "titleSlug": "search-insert-position",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1673163182",
+      "runtime": 0,
+      "memory": 43200000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 57.63899999999998,
+      "language": "csharp",
+      "timestamp": 1750641654
+    }
+  ]
+}

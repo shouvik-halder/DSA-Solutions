@@ -1,0 +1,11 @@
+{
+  "pattern": "Morris Traversal",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses Morris Traversal to perform an inorder traversal of the binary tree without using additional space for a stack or recursion. It modifies the tree temporarily by establishing links to the predecessor nodes, allowing traversal without extra space.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Depth-First Search",
+    "Tree Traversal"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(m + n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two pointers to traverse the two input arrays from the end towards the beginning. It compares the elements from both arrays and places the larger element at the end of the first array, effectively merging them in sorted order.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Merge Sort",
+    "Sorting"
+  ]
+}

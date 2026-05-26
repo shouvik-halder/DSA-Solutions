@@ -1,0 +1,11 @@
+{
+  "pattern": "Mathematical Summation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution calculates the expected sum of the first n natural numbers and subtracts the sum of the elements in the array to find the missing number. This approach is efficient as it only requires a single pass through the array and uses constant space.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array",
+    "Hash Table"
+  ]
+}

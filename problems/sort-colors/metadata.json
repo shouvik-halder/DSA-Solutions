@@ -1,0 +1,21 @@
+{
+  "title": "Sort Colors",
+  "titleSlug": "sort-colors",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1889486807",
+      "runtime": 0,
+      "memory": 46400000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 57.19030000000001,
+      "language": "csharp",
+      "timestamp": 1768797921
+    }
+  ]
+}

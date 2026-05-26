@@ -1,0 +1,24 @@
+{
+  "title": "Missing Number",
+  "titleSlug": "missing-number",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Binary Search",
+    "Bit Manipulation",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1670061928",
+      "runtime": 0,
+      "memory": 47000000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 85.76360000000001,
+      "language": "csharp",
+      "timestamp": 1750392202
+    }
+  ]
+}

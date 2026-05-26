@@ -1,0 +1,11 @@
+{
+  "pattern": "Stack",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The MinStack uses two stacks to keep track of the main stack's elements and the minimum values. Every time a value is pushed, it is compared with the current minimum, ensuring that the minimum stack always has the smallest value at the top.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Design",
+    "Data Structure"
+  ]
+}

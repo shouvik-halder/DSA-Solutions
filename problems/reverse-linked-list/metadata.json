@@ -1,0 +1,20 @@
+{
+  "title": "Reverse Linked List",
+  "titleSlug": "reverse-linked-list",
+  "difficulty": "EASY",
+  "tags": [
+    "Linked List",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1964557814",
+      "runtime": 0,
+      "memory": 43000000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 15.371,
+      "language": "csharp",
+      "timestamp": 1774938746
+    }
+  ]
+}

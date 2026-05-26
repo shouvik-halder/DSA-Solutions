@@ -1,0 +1,20 @@
+{
+  "title": "Remove Outermost Parentheses",
+  "titleSlug": "remove-outermost-parentheses",
+  "difficulty": "EASY",
+  "tags": [
+    "String",
+    "Stack"
+  ],
+  "submissions": [
+    {
+      "submissionId": "1731173698",
+      "runtime": 1,
+      "memory": 41400000,
+      "runtimePercentile": 98.0263,
+      "memoryPercentile": 65.1314,
+      "language": "csharp",
+      "timestamp": 1754913933
+    }
+  ]
+}

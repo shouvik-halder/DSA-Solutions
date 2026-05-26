@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the Floyd's Tortoise and Hare algorithm, where two pointers traverse the linked list at different speeds. If there is a cycle, the fast pointer will eventually meet the slow pointer; otherwise, the fast pointer will reach the end of the list.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Linked List",
+    "Hash Table"
+  ]
+}
