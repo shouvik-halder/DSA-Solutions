@@ -30,6 +30,7 @@ jobs:
           CSRFTOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UUUSERID: ${{ secrets.UUUSERID}}
         run: python scripts/sync.py
 
       - name: Generate dashboard

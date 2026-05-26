@@ -456,8 +456,6 @@ def validate_environment():
     ]
     if missing:
         raise EnvironmentError(f"Missing required environment variables: {', '.join(missing)}")
-    if not UUUSERID:
-        print("Warning: UUUSERID not set — submissionDetails may fail")
 
 
 def main():
