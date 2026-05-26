@@ -18,7 +18,9 @@ HEADERS = {
     "x-csrftoken": CSRFTOKEN,
     "Referer": "https://leetcode.com",
     "Content-Type": "application/json",
-    "User-Agent": "Mozilla/5.0",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Origin": "https://leetcode.com",
 }
 
 LANGUAGE_EXTENSIONS = {
@@ -41,10 +43,13 @@ LANGUAGE_EXTENSIONS = {
 SYNCED_FILE = Path("synced_submissions.json")
 PENDING_FILE = Path("pending_submissions.json")
 RECENT_SUBMISSIONS_FILE = Path("problems/recent_submissions.json")
-RATE_LIMIT_DELAY = 1.0
+RATE_LIMIT_DELAY = 1.5
 
 GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
 ANALYSIS_MODEL = "gpt-4o-mini"
+
+# Max pages to fetch via submissionList pagination (20 per page)
+MAX_PAGES = 5
 
 
 # ---------------------------------------------------------------------------
@@ -61,7 +66,14 @@ def get_ai_client() -> OpenAI | None:
     )
 
 
-def analyze_solution(client: OpenAI, title: str, difficulty: str, tags: list[str], code: str, language: str) -> dict | None:
+def analyze_solution(
+    client: OpenAI,
+    title: str,
+    difficulty: str,
+    tags: list[str],
+    code: str,
+    language: str,
+) -> dict | None:
     if client is None:
         return None
 
@@ -91,12 +103,9 @@ Respond with exactly this JSON structure:
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a DSA expert. Respond only with valid JSON, no markdown fences."
+                    "content": "You are a DSA expert. Respond only with valid JSON, no markdown fences.",
                 },
-                {
-                    "role": "user",
-                    "content": prompt
-                }
+                {"role": "user", "content": prompt},
             ],
             max_tokens=500,
             temperature=0.2,
@@ -120,13 +129,14 @@ Respond with exactly this JSON structure:
 # GraphQL helpers
 # ---------------------------------------------------------------------------
 
-def graphql_request(query: str, variables: dict = None):
+def graphql_request(query: str, variables: dict = None) -> dict:
     response = requests.post(
         GRAPHQL_URL,
         json={"query": query, "variables": variables or {}},
         headers=HEADERS,
+        timeout=30,
     )
-    print(f"Status Code: {response.status_code}")
+    print(f"  Status: {response.status_code}")
     response.raise_for_status()
     data = response.json()
     if "errors" in data:
@@ -134,52 +144,80 @@ def graphql_request(query: str, variables: dict = None):
     return data["data"]
 
 
-def get_recent_submissions():
-    query = """
-    query recentAcSubmissions($username: String!) {
-      recentAcSubmissionList(username: $username) {
-        id
-        title
-        titleSlug
-        timestamp
-      }
-    }
+def get_all_accepted_submissions() -> list[dict]:
     """
-    data = graphql_request(query, {"username": USERNAME})
-    return data["recentAcSubmissionList"]
-
-
-def get_submission_details(submission_id: str) -> dict | None:
+    Fetch accepted submissions using submissionList with pagination.
+    Returns submissions with code included — no second API call needed.
+    Stops early when all submissions on a page are already synced.
+    """
     query = """
-    query submissionDetails($submissionId: Int!) {
-      submissionDetails(submissionId: $submissionId) {
-        runtime
-        memory
-        code
-        timestamp
-        lang {
-          name
-        }
-        question {
+    query submissionList($offset: Int!, $limit: Int!, $lastKey: String) {
+      submissionList(offset: $offset, limit: $limit, lastKey: $lastKey) {
+        lastKey
+        hasNext
+        submissions {
+          id
           title
           titleSlug
-          difficulty
+          statusDisplay
+          runtime
+          memory
+          timestamp
+          lang
+          code
         }
       }
     }
     """
-    data = graphql_request(query, {"submissionId": int(submission_id)})
-    details = data["submissionDetails"]
-    if details is None:
-        print(f"Warning: submissionDetails returned null for {submission_id}")
-        return None
-    return details
+
+    all_accepted = []
+    offset = 0
+    limit = 20
+    last_key = None
+    page = 0
+
+    while page < MAX_PAGES:
+        print(f"  Fetching page {page + 1} (offset={offset})...")
+        try:
+            data = graphql_request(query, {
+                "offset": offset,
+                "limit": limit,
+                "lastKey": last_key,
+            })
+        except Exception as e:
+            print(f"  Error fetching submissions page {page + 1}: {e}")
+            break
+
+        result = data.get("submissionList")
+        if not result:
+            print("  submissionList returned null — session may be expired")
+            break
+
+        submissions = result.get("submissions", [])
+        has_next = result.get("hasNext", False)
+        last_key = result.get("lastKey")
+
+        accepted = [s for s in submissions if s.get("statusDisplay") == "Accepted"]
+        all_accepted.extend(accepted)
+
+        print(f"  Page {page + 1}: {len(submissions)} total, {len(accepted)} accepted")
+
+        if not has_next:
+            break
+
+        offset += limit
+        page += 1
+        time.sleep(RATE_LIMIT_DELAY)
+
+    return all_accepted
 
 
-def get_problem_tags(title_slug: str) -> list[str]:
+def get_problem_metadata(title_slug: str) -> dict:
+    """Fetch difficulty and topic tags for a problem."""
     query = """
     query questionData($titleSlug: String!) {
       question(titleSlug: $titleSlug) {
+        difficulty
         topicTags {
           name
           slug
@@ -189,10 +227,14 @@ def get_problem_tags(title_slug: str) -> list[str]:
     """
     try:
         data = graphql_request(query, {"titleSlug": title_slug})
-        return [tag["name"] for tag in data["question"]["topicTags"]]
+        q = data.get("question", {})
+        return {
+            "difficulty": q.get("difficulty", "Unknown"),
+            "tags": [tag["name"] for tag in q.get("topicTags", [])],
+        }
     except Exception as e:
-        print(f"Warning: could not fetch tags for {title_slug}: {e}")
-        return []
+        print(f"  Warning: could not fetch metadata for {title_slug}: {e}")
+        return {"difficulty": "Unknown", "tags": []}
 
 
 # ---------------------------------------------------------------------------
@@ -230,7 +272,6 @@ def save_synced_submissions(submission_ids: set):
 
 
 def load_pending() -> dict:
-    """Load submissions that returned null details and need to be retried."""
     if not PENDING_FILE.exists():
         return {}
     with open(PENDING_FILE, "r") as f:
@@ -244,23 +285,54 @@ def save_pending(pending: dict):
 
 def save_recent_submissions(submissions: list):
     RECENT_SUBMISSIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    # Save a simplified version for reference (no code to keep file small)
+    simplified = [
+        {
+            "id": s["id"],
+            "title": s["title"],
+            "titleSlug": s["titleSlug"],
+            "timestamp": s["timestamp"],
+            "lang": s["lang"],
+        }
+        for s in submissions
+    ]
     with open(RECENT_SUBMISSIONS_FILE, "w") as f:
-        json.dump(submissions, f, indent=2)
+        json.dump(simplified, f, indent=2)
 
 
 # ---------------------------------------------------------------------------
 # Core save logic
 # ---------------------------------------------------------------------------
 
-def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
-    question = details["question"]
-    title_slug = question["titleSlug"]
-    lang_name = details["lang"]["name"]
-    timestamp = details["timestamp"]
+def save_problem(submission: dict, ai_client: OpenAI | None):
+    """
+    Save a submission. submission dict comes directly from submissionList
+    so it already contains code, runtime, memory, lang, timestamp.
+    """
+    submission_id = submission["id"]
+    title_slug = submission["titleSlug"]
+    lang_name = submission["lang"]
+    timestamp = int(submission["timestamp"])
+    code = submission.get("code", "")
+    runtime_str = submission.get("runtime", "0 ms")
+    memory_str = submission.get("memory", "0 MB")
+
+    # Parse runtime (e.g. "10 ms" -> 10)
+    try:
+        runtime = int(runtime_str.replace(" ms", "").strip())
+    except Exception:
+        runtime = 0
+
+    # Parse memory (e.g. "45.3 MB" -> 45300000 bytes)
+    try:
+        memory_mb = float(memory_str.replace(" MB", "").strip())
+        memory = int(memory_mb * 1_000_000)
+    except Exception:
+        memory = 0
 
     extension = LANGUAGE_EXTENSIONS.get(lang_name)
     if extension is None:
-        print(f"Warning: unknown language '{lang_name}' for {title_slug} — saving as .txt")
+        print(f"  Warning: unknown language '{lang_name}' — saving as .txt")
         extension = "txt"
 
     problem_dir = Path("problems") / title_slug
@@ -268,16 +340,18 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
     problem_dir.mkdir(parents=True, exist_ok=True)
     submissions_dir.mkdir(parents=True, exist_ok=True)
 
+    # Save timestamped submission
     with open(submissions_dir / f"{timestamp}.{extension}", "w") as f:
-        f.write(details["code"])
+        f.write(code)
 
+    # Always overwrite solution.<ext> with latest
     with open(problem_dir / f"solution.{extension}", "w") as f:
-        f.write(details["code"])
+        f.write(code)
 
     submission_record = {
         "submissionId": submission_id,
-        "runtime": details["runtime"],
-        "memory": details["memory"],
+        "runtime": runtime,
+        "memory": memory,
         "language": lang_name,
         "timestamp": timestamp,
     }
@@ -286,15 +360,15 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
     is_new_problem = not metadata
 
     if is_new_problem:
-        print(f"  Fetching tags for {title_slug}...")
-        tags = get_problem_tags(title_slug)
+        print(f"  Fetching metadata for {title_slug}...")
+        problem_meta = get_problem_metadata(title_slug)
         time.sleep(RATE_LIMIT_DELAY)
 
         metadata = {
-            "title": question["title"],
+            "title": submission["title"],
             "titleSlug": title_slug,
-            "difficulty": question["difficulty"],
-            "tags": tags,
+            "difficulty": problem_meta["difficulty"],
+            "tags": problem_meta["tags"],
             "submissions": [submission_record],
         }
     else:
@@ -302,22 +376,27 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
         if submission_id not in existing_ids:
             metadata["submissions"].append(submission_record)
 
+        # Backfill tags if missing
         if not metadata.get("tags"):
             print(f"  Backfilling tags for {title_slug}...")
-            metadata["tags"] = get_problem_tags(title_slug)
+            problem_meta = get_problem_metadata(title_slug)
+            metadata["tags"] = problem_meta["tags"]
+            if not metadata.get("difficulty") or metadata["difficulty"] == "Unknown":
+                metadata["difficulty"] = problem_meta["difficulty"]
             time.sleep(RATE_LIMIT_DELAY)
 
     save_metadata(problem_dir, metadata)
 
+    # AI analysis — only if missing
     analysis_path = problem_dir / "analysis.json"
-    if not analysis_path.exists():
+    if not analysis_path.exists() and code:
         print(f"  Running AI analysis for {title_slug}...")
         analysis = analyze_solution(
             client=ai_client,
-            title=question["title"],
-            difficulty=question["difficulty"],
+            title=submission["title"],
+            difficulty=metadata.get("difficulty", "Unknown"),
             tags=metadata.get("tags", []),
-            code=details["code"],
+            code=code,
             language=lang_name,
         )
         if analysis:
@@ -325,7 +404,7 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
             print(f"  Pattern: {analysis.get('pattern', 'unknown')}")
         time.sleep(RATE_LIMIT_DELAY)
 
-    print(f"Saved: {problem_dir} ({len(metadata['submissions'])} submission(s))")
+    print(f"  Saved: {problem_dir} ({len(metadata['submissions'])} submission(s))")
 
 
 # ---------------------------------------------------------------------------
@@ -348,42 +427,25 @@ def main():
     validate_environment()
 
     ai_client = get_ai_client()
-
     synced_submissions = load_synced_submissions()
     pending = load_pending()
 
-    submissions = get_recent_submissions()
-    print(f"Found {len(submissions)} recent accepted submissions")
+    print("Fetching accepted submissions from LeetCode...")
+    submissions = get_all_accepted_submissions()
+    print(f"Found {len(submissions)} accepted submissions total")
+
+    # Save reference file (without code)
     save_recent_submissions(submissions)
+
+    # Clear pending queue — submissionList includes code directly,
+    # so the null-details problem no longer applies
+    if pending:
+        print(f"Clearing {len(pending)} stale pending entries (no longer needed)")
+        save_pending({})
 
     new_synced = set(synced_submissions)
     processed_count = 0
 
-    # --- Retry pending submissions first ---
-    if pending:
-        print(f"Retrying {len(pending)} pending submission(s)...")
-    resolved = []
-    for submission_id, info in list(pending.items()):
-        print(f"Retrying pending: {info['title']}")
-        details = get_submission_details(submission_id)
-        if details is None:
-            print(f"  Still null — keeping in pending queue")
-            time.sleep(RATE_LIMIT_DELAY)
-            continue
-        save_problem(submission_id, details, ai_client)
-        new_synced.add(submission_id)
-        save_synced_submissions(new_synced)
-        resolved.append(submission_id)
-        processed_count += 1
-        time.sleep(RATE_LIMIT_DELAY)
-
-    for sid in resolved:
-        del pending[sid]
-    if resolved:
-        save_pending(pending)
-        print(f"Resolved {len(resolved)} pending submission(s)")
-
-    # --- Process new submissions ---
     for submission in submissions:
         submission_id = submission["id"]
 
@@ -391,27 +453,24 @@ def main():
             print(f"Skipping already synced: {submission['title']}")
             continue
 
-        if submission_id in pending:
-            print(f"Skipping already pending: {submission['title']}")
+        # Skip non-accepted (shouldn't happen since we filter above, but be safe)
+        if submission.get("statusDisplay") != "Accepted":
+            continue
+
+        # Skip if no code returned
+        if not submission.get("code"):
+            print(f"  Warning: no code for {submission['title']} ({submission_id}) — skipping")
             continue
 
         print(f"Processing: {submission['title']}")
+        save_problem(submission, ai_client)
 
-        details = get_submission_details(submission_id)
-
-        if details is None:
-            print(f"  Details unavailable — adding to pending retry queue")
-            pending[submission_id] = {"title": submission["title"]}
-            save_pending(pending)
-            continue
-
-        save_problem(submission_id, details, ai_client)
         new_synced.add(submission_id)
         save_synced_submissions(new_synced)
         processed_count += 1
         time.sleep(RATE_LIMIT_DELAY)
 
-    print(f"Processed {processed_count} new submissions")
+    print(f"\nProcessed {processed_count} new submissions")
 
 
 if __name__ == "__main__":
