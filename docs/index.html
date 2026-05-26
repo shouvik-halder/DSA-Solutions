@@ -822,7 +822,7 @@ if (stats.patterns.length === 0) {
 // Calendar
 (function() {
   const cal = stats.calendar;
-  const WEEKS=26, CELL=14, GAP=3, STEP=CELL+GAP, LP=32, TP=24;
+  const WEEKS=52, CELL=14, GAP=3, STEP=CELL+GAP, LP=32, TP=24;
   const W=LP+WEEKS*STEP+4, H=TP+7*STEP+24;
   const svg = document.getElementById('cal-svg');
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
@@ -846,11 +846,9 @@ if (stats.patterns.length === 0) {
     String(today.getMonth()+1).padStart(2,'0')+'-'+
     String(today.getDate()).padStart(2,'0');
 
-  // Step back to the Sunday that starts the 26-week window
+  // Start on Sunday 51 weeks ago so the last column is the current week.
   const startDate = new Date(today);
-  startDate.setDate(today.getDate() - (WEEKS*7 - 1));
-  // Align to Sunday
-  startDate.setDate(startDate.getDate() - startDate.getDay());
+  startDate.setDate(today.getDate() - today.getDay() - (WEEKS - 1) * 7);
 
   const months={};
   let todayRect = null;
