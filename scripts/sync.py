@@ -39,10 +39,10 @@ LANGUAGE_EXTENSIONS = {
 }
 
 SYNCED_FILE = Path("synced_submissions.json")
+PENDING_FILE = Path("pending_submissions.json")
 RECENT_SUBMISSIONS_FILE = Path("problems/recent_submissions.json")
 RATE_LIMIT_DELAY = 1.0
 
-# GitHub Models endpoint (OpenAI-compatible)
 GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
 ANALYSIS_MODEL = "gpt-4o-mini"
 
@@ -103,7 +103,6 @@ Respond with exactly this JSON structure:
         )
 
         raw = response.choices[0].message.content.strip()
-        # Strip markdown fences if model adds them anyway
         if raw.startswith("```"):
             raw = raw.split("```")[1]
             if raw.startswith("json"):
@@ -150,7 +149,7 @@ def get_recent_submissions():
     return data["recentAcSubmissionList"]
 
 
-def get_submission_details(submission_id: str):
+def get_submission_details(submission_id: str) -> dict | None:
     query = """
     query submissionDetails($submissionId: Int!) {
       submissionDetails(submissionId: $submissionId) {
@@ -169,15 +168,11 @@ def get_submission_details(submission_id: str):
       }
     }
     """
-
     data = graphql_request(query, {"submissionId": int(submission_id)})
-
-    details = data.get("submissionDetails")
-
+    details = data["submissionDetails"]
     if details is None:
         print(f"Warning: submissionDetails returned null for {submission_id}")
         return None
-
     return details
 
 
@@ -234,6 +229,19 @@ def save_synced_submissions(submission_ids: set):
         json.dump(sorted(list(submission_ids)), f, indent=2)
 
 
+def load_pending() -> dict:
+    """Load submissions that returned null details and need to be retried."""
+    if not PENDING_FILE.exists():
+        return {}
+    with open(PENDING_FILE, "r") as f:
+        return json.load(f)
+
+
+def save_pending(pending: dict):
+    with open(PENDING_FILE, "w") as f:
+        json.dump(pending, f, indent=2)
+
+
 def save_recent_submissions(submissions: list):
     RECENT_SUBMISSIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(RECENT_SUBMISSIONS_FILE, "w") as f:
@@ -260,11 +268,9 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
     problem_dir.mkdir(parents=True, exist_ok=True)
     submissions_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save timestamped submission file
     with open(submissions_dir / f"{timestamp}.{extension}", "w") as f:
         f.write(details["code"])
 
-    # Always overwrite solution.<ext> with latest
     with open(problem_dir / f"solution.{extension}", "w") as f:
         f.write(details["code"])
 
@@ -303,7 +309,6 @@ def save_problem(submission_id: str, details: dict, ai_client: OpenAI | None):
 
     save_metadata(problem_dir, metadata)
 
-    # AI analysis — run for new problems or if analysis.json is missing
     analysis_path = problem_dir / "analysis.json"
     if not analysis_path.exists():
         print(f"  Running AI analysis for {title_slug}...")
@@ -345,14 +350,40 @@ def main():
     ai_client = get_ai_client()
 
     synced_submissions = load_synced_submissions()
+    pending = load_pending()
+
     submissions = get_recent_submissions()
     print(f"Found {len(submissions)} recent accepted submissions")
-
     save_recent_submissions(submissions)
 
     new_synced = set(synced_submissions)
     processed_count = 0
 
+    # --- Retry pending submissions first ---
+    if pending:
+        print(f"Retrying {len(pending)} pending submission(s)...")
+    resolved = []
+    for submission_id, info in list(pending.items()):
+        print(f"Retrying pending: {info['title']}")
+        details = get_submission_details(submission_id)
+        if details is None:
+            print(f"  Still null — keeping in pending queue")
+            time.sleep(RATE_LIMIT_DELAY)
+            continue
+        save_problem(submission_id, details, ai_client)
+        new_synced.add(submission_id)
+        save_synced_submissions(new_synced)
+        resolved.append(submission_id)
+        processed_count += 1
+        time.sleep(RATE_LIMIT_DELAY)
+
+    for sid in resolved:
+        del pending[sid]
+    if resolved:
+        save_pending(pending)
+        print(f"Resolved {len(resolved)} pending submission(s)")
+
+    # --- Process new submissions ---
     for submission in submissions:
         submission_id = submission["id"]
 
@@ -360,17 +391,23 @@ def main():
             print(f"Skipping already synced: {submission['title']}")
             continue
 
+        if submission_id in pending:
+            print(f"Skipping already pending: {submission['title']}")
+            continue
+
         print(f"Processing: {submission['title']}")
 
         details = get_submission_details(submission_id)
-        if details is None:
-            print(f"Skipping submission {submission['title']} due to missing details")
-            continue
-        save_problem(submission_id, details, ai_client)
 
+        if details is None:
+            print(f"  Details unavailable — adding to pending retry queue")
+            pending[submission_id] = {"title": submission["title"]}
+            save_pending(pending)
+            continue
+
+        save_problem(submission_id, details, ai_client)
         new_synced.add(submission_id)
         save_synced_submissions(new_synced)
-
         processed_count += 1
         time.sleep(RATE_LIMIT_DELAY)
 
