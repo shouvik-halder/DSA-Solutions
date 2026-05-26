@@ -931,139 +931,119 @@ if (stats.patterns.length === 0) {{
 
 // Calendar
 (function() {{
-            const cal = stats.calendar;
-            const WEEKS = 26,
-                CELL = 14,
-                GAP = 3,
-                STEP = CELL + GAP,
-                LP = 32,
-                TP = 24;
-            const W = LP + WEEKS * STEP + 4,
-                H = TP + 7 * STEP + 24;
-            const svg = document.getElementById('cal-svg');
-            svg.setAttribute('viewBox', `0 0 ${{W}} ${{H}}`);
-            svg.setAttribute('width', W);
-            svg.setAttribute('height', H);
-            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            [1, 3, 5].forEach(d => {{
-                    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                    t.setAttribute('x', LP - 6);
-                    t.setAttribute('y', TP + d * STEP + CELL / 2);
-                    t.setAttribute('text-anchor', 'end');
-                    t.setAttribute('dominant-baseline', 'middle');
-                    t.setAttribute('fill', '#4a4a6a');
-                    t.setAttribute('font-size', '9');
-                    t.setAttribute('font-family', 'JetBrains Mono,monospace');
-                    t.textContent = days[d];
-                    svg.appendChild(t);
-                }});
+  const cal = stats.calendar;
+  const WEEKS=26, CELL=14, GAP=3, STEP=CELL+GAP, LP=32, TP=24;
+  const W=LP+WEEKS*STEP+4, H=TP+7*STEP+24;
+  const svg = document.getElementById('cal-svg');
+  svg.setAttribute('viewBox',`0 0 ${{W}} ${{H}}`);
+  svg.setAttribute('width',W); svg.setAttribute('height',H);
 
-            // Anchor to today in LOCAL time so day-of-week matches the grid
-            const today = new Date();
-            const todayStr = today.getFullYear() + '-' +
-                String(today.getMonth() + 1).padStart(2, '0') + '-' +
-                String(today.getDate()).padStart(2, '0');
+  const days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  [1,3,5].forEach(d => {{
+    const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',LP-6); t.setAttribute('y',TP+d*STEP+CELL/2);
+    t.setAttribute('text-anchor','end');
+    t.setAttribute('dominant-baseline','middle');
+    t.setAttribute('fill','#4a4a6a');
+    t.setAttribute('font-size','9');
+    t.setAttribute('font-family','JetBrains Mono,monospace');
+    t.textContent=days[d]; svg.appendChild(t);
+  }});
 
-            // Step back to the Sunday that starts the 26-week window
-            const startDate = new Date(today);
-            startDate.setDate(today.getDate() - (WEEKS * 7 - 1));
-            // Align to Sunday
-            startDate.setDate(startDate.getDate() - startDate.getDay());
+  // Anchor to today in LOCAL time so day-of-week matches the grid
+  const today = new Date();
+  const todayStr = today.getFullYear()+'-'+
+    String(today.getMonth()+1).padStart(2,'0')+'-'+
+    String(today.getDate()).padStart(2,'0');
 
-            const months = {
-                {}
-            };
-            let todayRect = null;
+  // Step back to the Sunday that starts the 26-week window
+  const startDate = new Date(today);
+  startDate.setDate(today.getDate() - (WEEKS*7 - 1));
+  // Align to Sunday
+  startDate.setDate(startDate.getDate() - startDate.getDay());
 
-            for (let w = 0; w < WEEKS; w++) {{
-                    for (let d = 0; d < 7; d++) {{
-                            const date = new Date(startDate);
-                            date.setDate(startDate.getDate() + w * 7 + d);
+  const months={{}};
+  let todayRect = null;
 
-                            const ds = date.getFullYear() + '-' +
-                                String(date.getMonth() + 1).padStart(2, '0') + '-' +
-                                String(date.getDate()).padStart(2, '0');
+  for(let w=0;w<WEEKS;w++) {{
+    for(let d=0;d<7;d++) {{
+      const date = new Date(startDate);
+      date.setDate(startDate.getDate() + w*7 + d);
 
-                            const count = cal[ds] || 0;
-                            const isToday = ds === todayStr;
+      const ds = date.getFullYear()+'-'+
+        String(date.getMonth()+1).padStart(2,'0')+'-'+
+        String(date.getDate()).padStart(2,'0');
 
-                            let fill = '#1e1e2e';
-                            if (count === 1) fill = '#312e81';
-                            else if (count === 2) fill = '#4338ca';
-                            else if (count >= 3) fill = '#7c6af7';
+      const count = cal[ds] || 0;
+      const isToday = ds === todayStr;
 
-                            const x = LP + w * STEP;
-                            const y = TP + d * STEP;
+      let fill = '#1e1e2e';
+      if(count===1) fill='#312e81';
+      else if(count===2) fill='#4338ca';
+      else if(count>=3) fill='#7c6af7';
 
-                            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                            rect.setAttribute('x', x);
-                            rect.setAttribute('y', y);
-                            rect.setAttribute('width', CELL);
-                            rect.setAttribute('height', CELL);
-                            rect.setAttribute('rx', 3);
-                            rect.setAttribute('fill', fill);
+      const x = LP + w*STEP;
+      const y = TP + d*STEP;
 
-                            const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-                            title.textContent = ds + (count ? ` — ${{count}} submission${{count>1?'s':''}}` : '');
-                            rect.appendChild(title);
-                            svg.appendChild(rect);
+      const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+      rect.setAttribute('x', x);
+      rect.setAttribute('y', y);
+      rect.setAttribute('width', CELL);
+      rect.setAttribute('height', CELL);
+      rect.setAttribute('rx', 3);
+      rect.setAttribute('fill', fill);
 
-                            // Today: draw a border rect on top
-                            if (isToday) {{
-                                    todayRect = {
-                                        {
-                                            x,
-                                            y
-                                        }
-                                    };
-                                }}
+      const title = document.createElementNS('http://www.w3.org/2000/svg','title');
+      title.textContent = ds + (count ? ` — ${{count}} submission${{count>1?'s':''}}` : '');
+      rect.appendChild(title);
+      svg.appendChild(rect);
 
-                            // Month label on first day of each column
-                            if (d === 0) {{
-                                    const mo = date.toLocaleString('en', {
-                                        {
-                                            month: 'short'
-                                        }
-                                    });
-                                    const key = date.getFullYear() + '-' + date.getMonth();
-                                    if (!months[key]) {{
-                                            months[key] = true;
-                                            const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                                            t.setAttribute('x', LP + w * STEP);
-                                            t.setAttribute('y', TP - 8);
-                                            t.setAttribute('fill', '#4a4a6a');
-                                            t.setAttribute('font-size', '9');
-                                            t.setAttribute('font-family', 'JetBrains Mono,monospace');
-                                            t.textContent = mo;
-                                            svg.appendChild(t);
-                                        }}
-                                        
-                                }}
-                        }}
-                }}
+      // Today: draw a border rect on top
+      if(isToday) {{
+        todayRect = {{ x, y }};
+      }}
 
-// Draw today highlight on top of everything else
- if (todayRect) {{
-         const highlight = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-         highlight.setAttribute('x', todayRect.x);
-         highlight.setAttribute('y', todayRect.y);
-         highlight.setAttribute('width', CELL);
-         highlight.setAttribute('height', CELL);
-         highlight.setAttribute('rx', 3);
-         highlight.setAttribute('fill', 'none');
-         highlight.setAttribute('stroke', '#7c6af7');
-         highlight.setAttribute('stroke-width', '1.5');
-         svg.appendChild(highlight);
+      // Month label on first day of each column
+      if(d===0) {{
+        const mo = date.toLocaleString('en',{{month:'short'}});
+        const key = date.getFullYear()+'-'+date.getMonth();
+        if(!months[key]) {{
+          months[key] = true;
+          const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+          t.setAttribute('x', LP+w*STEP);
+          t.setAttribute('y', TP-8);
+          t.setAttribute('fill','#4a4a6a');
+          t.setAttribute('font-size','9');
+          t.setAttribute('font-family','JetBrains Mono,monospace');
+          t.textContent = mo;
+          svg.appendChild(t);
+        }}
+      }}
+    }}
+  }}
 
-         // Dot below today's column
-         const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-         dot.setAttribute('cx', todayRect.x + CELL / 2);
-         dot.setAttribute('cy', TP + 7 * STEP + 6);
-         dot.setAttribute('r', 2);
-         dot.setAttribute('fill', '#7c6af7');
-         svg.appendChild(dot);
-     }}
- }})();
+  // Draw today highlight on top of everything else
+  if(todayRect) {{
+    const highlight = document.createElementNS('http://www.w3.org/2000/svg','rect');
+    highlight.setAttribute('x', todayRect.x);
+    highlight.setAttribute('y', todayRect.y);
+    highlight.setAttribute('width', CELL);
+    highlight.setAttribute('height', CELL);
+    highlight.setAttribute('rx', 3);
+    highlight.setAttribute('fill', 'none');
+    highlight.setAttribute('stroke', '#7c6af7');
+    highlight.setAttribute('stroke-width', '1.5');
+    svg.appendChild(highlight);
+
+    // Dot below today's column
+    const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    dot.setAttribute('cx', todayRect.x + CELL/2);
+    dot.setAttribute('cy', TP + 7*STEP + 6);
+    dot.setAttribute('r', 2);
+    dot.setAttribute('fill','#7c6af7');
+    svg.appendChild(dot);
+  }}
+}})();
 
 // Hints builder
 function buildHints(p) {{
