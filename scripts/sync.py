@@ -451,13 +451,13 @@ def save_problem(problem: dict, submission: dict, details: dict, ai_client: Open
 
 def validate_environment():
     missing = [
-        v for v in ["LEETCODE_SESSION", "CSRFTOKEN", "LEETCODE_USERNAME"]
+        v for v in ["LEETCODE_SESSION", "CSRFTOKEN", "LEETCODE_USERNAME", "UUUSERID"]
         if not os.getenv(v)
     ]
     if missing:
         raise EnvironmentError(f"Missing required environment variables: {', '.join(missing)}")
     if not UUUSERID:
-        print("Warning: LEETCODE_UUUSERID not set — submissionDetails may fail")
+        print("Warning: UUUSERID not set — submissionDetails may fail")
 
 
 def main():
