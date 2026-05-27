@@ -1,0 +1,21 @@
+{
+  "title": "Find the Index of the First Occurrence in a String",
+  "titleSlug": "find-the-index-of-the-first-occurrence-in-a-string",
+  "difficulty": "EASY",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "String Matching"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2014227170",
+      "runtime": 1,
+      "memory": 40100000,
+      "runtimePercentile": 44.0055,
+      "memoryPercentile": 84.4742,
+      "language": "csharp",
+      "timestamp": 1779860906
+    }
+  ]
+}

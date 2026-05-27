@@ -1,0 +1,11 @@
+{
+  "pattern": "KMP (Knuth-Morris-Pratt)",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(m)",
+  "explanation": "The solution uses the KMP algorithm to find the first occurrence of the needle in the haystack efficiently. It preprocesses the needle to create an LPS (Longest Prefix Suffix) array, which helps in skipping unnecessary comparisons during the search.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Two Pointers",
+    "String Matching"
+  ]
+}
