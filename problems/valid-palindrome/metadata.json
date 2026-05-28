@@ -15,6 +15,15 @@
       "memoryPercentile": 71.31400000000001,
       "language": "csharp",
       "timestamp": 1757514176
+    },
+    {
+      "submissionId": "2014301928",
+      "runtime": 18,
+      "memory": 44500000,
+      "runtimePercentile": 55.843100000000014,
+      "memoryPercentile": 94.2972,
+      "language": "csharp",
+      "timestamp": 1779865422
     }
   ]
 }

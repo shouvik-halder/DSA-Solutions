@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a fixed-size array to count the occurrences of each character in the first string and then decrements the counts based on the second string. If any count goes negative, it indicates that the second string has more of that character than the first, thus returning false.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Counting Sort",
+    "Character Frequency"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Valid Anagram",
+  "titleSlug": "valid-anagram",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2014550517",
+      "runtime": 1,
+      "memory": 43500000,
+      "runtimePercentile": 82.8329,
+      "memoryPercentile": 84.74360000000001,
+      "language": "csharp",
+      "timestamp": 1779883970
+    }
+  ]
+}

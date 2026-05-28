@@ -1,0 +1,21 @@
+{
+  "title": "Longest Palindrome",
+  "titleSlug": "longest-palindrome",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Greedy"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2014506750",
+      "runtime": 5,
+      "memory": 40600000,
+      "runtimePercentile": 67.54090000000001,
+      "memoryPercentile": 56.06550000000001,
+      "language": "csharp",
+      "timestamp": 1779880469
+    }
+  ]
+}
