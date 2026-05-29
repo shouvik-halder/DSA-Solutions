@@ -1,0 +1,11 @@
+{
+  "pattern": "String Manipulation",
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution checks all possible rotations of the string by concatenating substrings. It iterates through each possible rotation and compares it to the goal string.",
+  "improvements": "Using string concatenation to form a new string and checking if the goal is a substring can reduce the time complexity to O(n).",
+  "relatedPatterns": [
+    "Sliding Window",
+    "Substring Search"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Rotate String",
+  "titleSlug": "rotate-string",
+  "difficulty": "EASY",
+  "tags": [
+    "String",
+    "String Matching"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2015246443",
+      "runtime": 0,
+      "memory": 41500000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 10.470000000000018,
+      "language": "csharp",
+      "timestamp": 1779953143
+    }
+  ]
+}

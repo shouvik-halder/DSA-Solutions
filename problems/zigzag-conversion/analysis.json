@@ -1,0 +1,11 @@
+{
+  "pattern": "String Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution constructs a zigzag pattern by iterating through the input string and placing characters into an array of strings corresponding to each row. It uses a direction variable to switch between moving down and up the rows as it fills the characters.",
+  "improvements": "Consider using a StringBuilder instead of string concatenation for better performance when constructing the final result.",
+  "relatedPatterns": [
+    "Dynamic Programming",
+    "Array Manipulation"
+  ]
+}

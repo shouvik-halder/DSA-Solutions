@@ -1,0 +1,17 @@
+{
+  "title": "Password Strength",
+  "titleSlug": "password-strength",
+  "difficulty": "MEDIUM",
+  "tags": [],
+  "submissions": [
+    {
+      "submissionId": "2015770679",
+      "runtime": 15,
+      "memory": 50700000,
+      "runtimePercentile": 30.70879999999999,
+      "memoryPercentile": 29.92139999999997,
+      "language": "csharp",
+      "timestamp": 1779991953
+    }
+  ]
+}

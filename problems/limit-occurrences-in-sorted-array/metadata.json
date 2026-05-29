@@ -1,0 +1,17 @@
+{
+  "title": "Limit Occurrences in Sorted Array",
+  "titleSlug": "limit-occurrences-in-sorted-array",
+  "difficulty": "EASY",
+  "tags": [],
+  "submissions": [
+    {
+      "submissionId": "2015762005",
+      "runtime": 1,
+      "memory": 51900000,
+      "runtimePercentile": 96.4789,
+      "memoryPercentile": 60.5633,
+      "language": "csharp",
+      "timestamp": 1779991431
+    }
+  ]
+}

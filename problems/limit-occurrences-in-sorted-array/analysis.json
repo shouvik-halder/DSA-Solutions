@@ -1,0 +1,11 @@
+{
+  "pattern": "Two Pointers",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a single pass through the sorted array to count occurrences of each number. It maintains a result list that only includes numbers that appear up to 'k' times.",
+  "improvements": "Consider using a fixed-size array for the result if the maximum size is known, to reduce space complexity.",
+  "relatedPatterns": [
+    "Sliding Window",
+    "Frequency Count"
+  ]
+}

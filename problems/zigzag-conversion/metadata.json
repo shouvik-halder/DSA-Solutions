@@ -1,0 +1,19 @@
+{
+  "title": "Zigzag Conversion",
+  "titleSlug": "zigzag-conversion",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "String"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2015358448",
+      "runtime": 24,
+      "memory": 57000000,
+      "runtimePercentile": 17.59109999999999,
+      "memoryPercentile": 14.817200000000062,
+      "language": "csharp",
+      "timestamp": 1779962166
+    }
+  ]
+}
