@@ -1,0 +1,11 @@
+{
+  "pattern": "Array Traversal",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through the array to count the number of elements in ascending and descending order based on their expected positions in a sorted permutation. It then evaluates specific conditions to determine the minimum operations required to sort the permutation.",
+  "improvements": "Consider handling edge cases more explicitly to improve readability and maintainability.",
+  "relatedPatterns": [
+    "Greedy",
+    "Sorting"
+  ]
+}

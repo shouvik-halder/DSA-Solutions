@@ -1,0 +1,17 @@
+{
+  "title": "Minimum Operations to Sort a Permutation",
+  "titleSlug": "minimum-operations-to-sort-a-permutation",
+  "difficulty": "MEDIUM",
+  "tags": [],
+  "submissions": [
+    {
+      "submissionId": "2016181789",
+      "runtime": 5,
+      "memory": 70200000,
+      "runtimePercentile": 67.5,
+      "memoryPercentile": 50.0,
+      "language": "csharp",
+      "timestamp": 1780038898
+    }
+  ]
+}
