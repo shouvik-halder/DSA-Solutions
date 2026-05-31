@@ -1,0 +1,11 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses bit manipulation to find two unique numbers in an array where every other number appears twice. It first computes the XOR of all numbers to find the XOR of the two unique numbers, then isolates a bit that differentiates them to separate the two unique numbers.",
+  "improvements": null,
+  "relatedPatterns": [
+    "XOR",
+    "Divide and Conquer"
+  ]
+}

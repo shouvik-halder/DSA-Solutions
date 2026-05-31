@@ -1,0 +1,11 @@
+{
+  "pattern": "Array Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses the input array itself to track the presence of numbers by marking indices as negative. It first identifies the duplicate by checking if an index has already been marked, and then finds the missing number by checking which index remains positive.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "Sorting"
+  ]
+}

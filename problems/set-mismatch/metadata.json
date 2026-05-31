@@ -1,0 +1,22 @@
+{
+  "title": "Set Mismatch",
+  "titleSlug": "set-mismatch",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2017876458",
+      "runtime": 2,
+      "memory": 54500000,
+      "runtimePercentile": 71.9279,
+      "memoryPercentile": 80.04520000000001,
+      "language": "csharp",
+      "timestamp": 1780208074
+    }
+  ]
+}

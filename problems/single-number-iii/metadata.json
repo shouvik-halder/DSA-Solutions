@@ -1,0 +1,20 @@
+{
+  "title": "Single Number III",
+  "titleSlug": "single-number-iii",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2017887437",
+      "runtime": 0,
+      "memory": 49300000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 81.01280000000001,
+      "language": "csharp",
+      "timestamp": 1780208852
+    }
+  ]
+}

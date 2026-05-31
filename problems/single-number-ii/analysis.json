@@ -1,0 +1,11 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses two variables, 'ones' and 'twos', to keep track of the bits that have appeared once and twice respectively. By using bitwise operations, it efficiently determines the unique number that appears only once in the array while all other numbers appear three times.",
+  "improvements": null,
+  "relatedPatterns": [
+    "XOR",
+    "Counting Bits"
+  ]
+}
