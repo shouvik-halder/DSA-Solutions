@@ -1,0 +1,21 @@
+{
+  "title": "Power of Two",
+  "titleSlug": "power-of-two",
+  "difficulty": "EASY",
+  "tags": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2018695305",
+      "runtime": 0,
+      "memory": 31100000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 18.02950000000002,
+      "language": "csharp",
+      "timestamp": 1780289319
+    }
+  ]
+}

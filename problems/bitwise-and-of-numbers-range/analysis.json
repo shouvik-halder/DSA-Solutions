@@ -1,0 +1,11 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(log(max(left, right)))",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses bit manipulation to find the bitwise AND of all numbers in the range [left, right]. It repeatedly clears the least significant bit of 'right' until it becomes less than or equal to 'left', effectively narrowing down the range.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Bitwise Operations",
+    "Range Queries"
+  ]
+}

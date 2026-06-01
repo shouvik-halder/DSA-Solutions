@@ -1,0 +1,20 @@
+{
+  "title": "Number of 1 Bits",
+  "titleSlug": "number-of-1-bits",
+  "difficulty": "EASY",
+  "tags": [
+    "Divide and Conquer",
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2017973943",
+      "runtime": 0,
+      "memory": 28400000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 99.58760000000001,
+      "language": "csharp",
+      "timestamp": 1780215442
+    }
+  ]
+}

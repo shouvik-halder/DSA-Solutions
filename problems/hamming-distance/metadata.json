@@ -1,0 +1,19 @@
+{
+  "title": "Hamming Distance",
+  "titleSlug": "hamming-distance",
+  "difficulty": "EASY",
+  "tags": [
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2018013030",
+      "runtime": 0,
+      "memory": 28800000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 87.1559,
+      "language": "csharp",
+      "timestamp": 1780218797
+    }
+  ]
+}

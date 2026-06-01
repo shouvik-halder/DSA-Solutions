@@ -1,0 +1,20 @@
+{
+  "title": "Reverse Bits",
+  "titleSlug": "reverse-bits",
+  "difficulty": "EASY",
+  "tags": [
+    "Divide and Conquer",
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2018725094",
+      "runtime": 20,
+      "memory": 28800000,
+      "runtimePercentile": 60.94119999999999,
+      "memoryPercentile": 83.76470000000002,
+      "language": "csharp",
+      "timestamp": 1780291360
+    }
+  ]
+}

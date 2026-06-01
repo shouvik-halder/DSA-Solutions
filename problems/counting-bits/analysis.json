@@ -1,0 +1,10 @@
+{
+  "pattern": "Dynamic Programming",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses dynamic programming to count the number of 1 bits for each integer from 0 to n. It leverages the relationship between the current number and its half to efficiently compute the count without needing to iterate through each bit individually.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Bit Manipulation"
+  ]
+}

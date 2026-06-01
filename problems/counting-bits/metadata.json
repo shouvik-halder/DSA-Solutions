@@ -1,0 +1,20 @@
+{
+  "title": "Counting Bits",
+  "titleSlug": "counting-bits",
+  "difficulty": "EASY",
+  "tags": [
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2018000318",
+      "runtime": 1,
+      "memory": 43400000,
+      "runtimePercentile": 66.2971,
+      "memoryPercentile": 96.0088,
+      "language": "csharp",
+      "timestamp": 1780217708
+    }
+  ]
+}

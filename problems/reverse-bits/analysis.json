@@ -1,0 +1,10 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution iterates through each of the 32 bits of the integer, shifting the result left and adding the least significant bit of n to it. This effectively reverses the bits of the input integer by processing each bit from least significant to most significant.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Divide and Conquer"
+  ]
+}

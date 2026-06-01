@@ -1,0 +1,10 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution checks if the number is greater than zero and if it has only one bit set in its binary representation. This is done using the expression (n & (n - 1)), which will be zero only for powers of two.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Mathematics"
+  ]
+}

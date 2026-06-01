@@ -1,0 +1,10 @@
+{
+  "pattern": "Bit Manipulation",
+  "timeComplexity": "O(log(max(x, y)))",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution calculates the Hamming distance by first finding the XOR of the two integers, which highlights the differing bits. It then counts the number of 1s in the binary representation of the XOR result, which corresponds to the Hamming distance.",
+  "improvements": "Using built-in functions to count bits could simplify the code, but the current approach is efficient.",
+  "relatedPatterns": [
+    "Bit Manipulation"
+  ]
+}

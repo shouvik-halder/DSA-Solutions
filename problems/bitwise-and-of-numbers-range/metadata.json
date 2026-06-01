@@ -1,0 +1,19 @@
+{
+  "title": "Bitwise AND of Numbers Range",
+  "titleSlug": "bitwise-and-of-numbers-range",
+  "difficulty": "MEDIUM",
+  "tags": [
+    "Bit Manipulation"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2018796921",
+      "runtime": 0,
+      "memory": 29700000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 70.0,
+      "language": "csharp",
+      "timestamp": 1780295662
+    }
+  ]
+}
