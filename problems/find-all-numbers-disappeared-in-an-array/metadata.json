@@ -1,0 +1,20 @@
+{
+  "title": "Find All Numbers Disappeared in an Array",
+  "titleSlug": "find-all-numbers-disappeared-in-an-array",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2020834473",
+      "runtime": 4,
+      "memory": 75700000,
+      "runtimePercentile": 76.4021,
+      "memoryPercentile": 33.96879999999994,
+      "language": "csharp",
+      "timestamp": 1780463329
+    }
+  ]
+}

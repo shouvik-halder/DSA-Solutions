@@ -1,0 +1,22 @@
+{
+  "title": "First Unique Character in a String",
+  "titleSlug": "first-unique-character-in-a-string",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Queue",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2020805948",
+      "runtime": 3,
+      "memory": 49100000,
+      "runtimePercentile": 76.8116,
+      "memoryPercentile": 84.3212,
+      "language": "csharp",
+      "timestamp": 1780461490
+    }
+  ]
+}

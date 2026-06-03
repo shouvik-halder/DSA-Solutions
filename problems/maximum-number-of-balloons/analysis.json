@@ -1,0 +1,11 @@
+{
+  "pattern": "Counting",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution counts the occurrences of each character in the input string and compares them to the required counts for the word 'balloon'. It calculates the maximum number of times 'balloon' can be formed by taking the minimum ratio of available characters to required characters.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "String"
+  ]
+}

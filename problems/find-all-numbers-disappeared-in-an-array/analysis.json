@@ -1,0 +1,11 @@
+{
+  "pattern": "In-place Hashing",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution modifies the input array to mark the presence of numbers by negating the value at the index corresponding to each number. After marking, it iterates through the array to collect indices that remain positive, indicating the numbers that are missing.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Array Manipulation",
+    "Cycle Detection"
+  ]
+}

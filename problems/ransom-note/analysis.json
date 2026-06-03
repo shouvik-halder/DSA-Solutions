@@ -1,0 +1,11 @@
+{
+  "pattern": "Counting",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a frequency array to count occurrences of each character in the magazine. It then checks if each character in the ransom note can be constructed from the available characters in the magazine by decrementing the counts in the frequency array.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Hash Table",
+    "String"
+  ]
+}

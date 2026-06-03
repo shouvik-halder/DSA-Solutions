@@ -1,0 +1,11 @@
+{
+  "pattern": "Counting",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses an array to count the frequency of each character in the string. It then iterates through the string a second time to find the first character with a frequency of one, returning its index.",
+  "improvements": "Instead of using IndexOf in the second loop, which can lead to O(n^2) in the worst case, maintain a separate index list for unique characters.",
+  "relatedPatterns": [
+    "Hash Table",
+    "Two Pass"
+  ]
+}

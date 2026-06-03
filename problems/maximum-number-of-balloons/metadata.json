@@ -1,0 +1,21 @@
+{
+  "title": "Maximum Number of Balloons",
+  "titleSlug": "maximum-number-of-balloons",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2020418333",
+      "runtime": 7,
+      "memory": 41300000,
+      "runtimePercentile": 43.0,
+      "memoryPercentile": 43.0,
+      "language": "csharp",
+      "timestamp": 1780419494
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Ransom Note",
+  "titleSlug": "ransom-note",
+  "difficulty": "EASY",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2020789134",
+      "runtime": 1,
+      "memory": 45900000,
+      "runtimePercentile": 98.5932,
+      "memoryPercentile": 90.1525,
+      "language": "csharp",
+      "timestamp": 1780460328
+    }
+  ]
+}

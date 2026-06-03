@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution uses a frequency array to count occurrences of each number in the input array. For each number encountered, it adds the current frequency to the count of good pairs and then increments the frequency for that number.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Counting",
+    "Array"
+  ]
+}

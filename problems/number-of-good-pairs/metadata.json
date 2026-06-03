@@ -1,0 +1,22 @@
+{
+  "title": "Number of Good Pairs",
+  "titleSlug": "number-of-good-pairs",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2020442140",
+      "runtime": 0,
+      "memory": 41200000,
+      "runtimePercentile": 100.0,
+      "memoryPercentile": 53.8463,
+      "language": "csharp",
+      "timestamp": 1780420769
+    }
+  ]
+}
