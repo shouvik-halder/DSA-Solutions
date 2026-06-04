@@ -1,0 +1,11 @@
+{
+  "pattern": "In-place Hashing",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "explanation": "The solution first checks if the number 1 is present in the array and replaces out-of-bound values with 1. It then uses the array itself to mark the presence of numbers by negating the values at the corresponding indices, allowing it to identify the first missing positive integer efficiently.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Cyclic Sort",
+    "Counting Sort"
+  ]
+}

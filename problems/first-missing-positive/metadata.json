@@ -1,0 +1,20 @@
+{
+  "title": "First Missing Positive",
+  "titleSlug": "first-missing-positive",
+  "difficulty": "HARD",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2021491033",
+      "runtime": 2,
+      "memory": 64200000,
+      "runtimePercentile": 60.2015,
+      "memoryPercentile": 67.00250000000001,
+      "language": "csharp",
+      "timestamp": 1780506741
+    }
+  ]
+}
