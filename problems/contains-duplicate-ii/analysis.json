@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a hash table to keep track of the last seen index of each number in the array. As it iterates through the array, it checks if the current number has been seen before and whether the distance between the current index and the last seen index is less than or equal to k.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Sliding Window",
+    "Two Pointers"
+  ]
+}

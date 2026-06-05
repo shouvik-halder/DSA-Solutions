@@ -1,0 +1,23 @@
+{
+  "title": "Intersection of Two Arrays II",
+  "titleSlug": "intersection-of-two-arrays-ii",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2022582435",
+      "runtime": 1,
+      "memory": 47100000,
+      "runtimePercentile": 95.1087,
+      "memoryPercentile": 84.51100000000002,
+      "language": "csharp",
+      "timestamp": 1780596408
+    }
+  ]
+}

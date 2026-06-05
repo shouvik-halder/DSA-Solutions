@@ -1,0 +1,11 @@
+{
+  "pattern": "Hash Table",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(n)",
+  "explanation": "The solution uses a hash table to count occurrences of elements in the first array. It then iterates through the second array, checking for common elements and reducing their count in the hash table until they are exhausted.",
+  "improvements": null,
+  "relatedPatterns": [
+    "Two Pointers",
+    "Sorting"
+  ]
+}

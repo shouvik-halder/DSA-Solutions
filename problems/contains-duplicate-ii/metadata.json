@@ -1,0 +1,21 @@
+{
+  "title": "Contains Duplicate II",
+  "titleSlug": "contains-duplicate-ii",
+  "difficulty": "EASY",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ],
+  "submissions": [
+    {
+      "submissionId": "2022388325",
+      "runtime": 17,
+      "memory": 70800000,
+      "runtimePercentile": 63.018499999999996,
+      "memoryPercentile": 58.06509999999996,
+      "language": "csharp",
+      "timestamp": 1780584478
+    }
+  ]
+}
